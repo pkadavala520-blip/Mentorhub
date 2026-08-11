@@ -1,0 +1,131 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Mentee.master.cs" Inherits="MentorHub.Mentee.Mentee" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mentee Dashboard | MentorHub</title>
+    <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../assets/vendor/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/css/styles.css?v=6" />
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                <div class="d-flex">
+                    <aside class="sidebar p-3">
+                        <h4 class="fw-bold mb-4"><i class="bi bi-person-hearts me-2"></i>Mentee Panel</h4>
+                        <nav class="nav flex-column">
+                            <a class="nav-link active" href="index.html"><i class="bi bi-speedometer2 me-2"></i>Dashboard</a>
+                            <a class="nav-link" href="profile.html"><i class="bi bi-person me-2"></i>Profile</a>
+                            <a class="nav-link" href="find-mentor.html"><i class="bi bi-search me-2"></i>Find Mentor</a>
+                            <a class="nav-link" href="recommended.html"><i class="bi bi-stars me-2"></i>Recommended Mentors</a>
+                            <a class="nav-link" href="requests.html"><i class="bi bi-envelope me-2"></i>My Requests</a>
+                            <a class="nav-link" href="messages.html"><i class="bi bi-chat-dots me-2"></i>Messages</a>
+                            <a class="nav-link" href="schedule.html"><i class="bi bi-calendar2-event me-2"></i>Schedule</a>
+                            <a class="nav-link" href="goals.html"><i class="bi bi-bullseye me-2"></i>Learning Goals</a>
+                            <a class="nav-link" href="feedback.html"><i class="bi bi-star me-2"></i>Feedback</a>
+                            <a class="nav-link" href="settings.html"><i class="bi bi-gear me-2"></i>Settings</a>
+                            <a class="nav-link" href="../Home/login.html"><i class="bi bi-box-arrow-right me-2"></i>Logout</a>
+                        </nav>
+                    </aside>
+            </asp:ContentPlaceHolder>
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                <main class="flex-grow-1 content-area p-4">
+                    <div class="topbar rounded-4 p-3 mb-4 d-flex justify-content-between align-items-center">
+                        <div>
+                            <button class="btn btn-outline-secondary me-3 sidebar-toggle-btn" data-sidebar-toggle aria-label="Toggle navigation menu" aria-expanded="false"><i class="bi bi-list"></i></button>
+                            <span class="fw-semibold">Your learning journey</span>
+                        </div>
+                        <div class="d-flex align-items-center gap-3">
+                            <i class="bi bi-bell fs-5"></i>
+                            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><rect width='200' height='200' fill='%23eef0f3'/><circle cx='100' cy='78' r='38' fill='%23a9b4c2'/><path d='M28 192 C28 128 172 128 172 192 Z' fill='%23a9b4c2'/></svg>" class="profile-avatar profile-photo profile-photo-empty" data-photo-key="menteeProfilePhoto" alt="Profile" />
+                        </div>
+                    </div>
+
+                    <div class="row g-4 mb-4">
+                        <div class="col-lg-4 col-md-6">
+                            <div class="dashboard-card p-4">
+                                <p class="text-muted mb-1">My Mentor</p>
+                                <h3 class="fw-bold mb-0">Daniel Ross</h3>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="dashboard-card p-4">
+                                <p class="text-muted mb-1">Pending Requests</p>
+                                <h3 class="fw-bold mb-0">2</h3>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="dashboard-card p-4">
+                                <p class="text-muted mb-1">Upcoming Sessions</p>
+                                <h3 class="fw-bold mb-0">4</h3>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="dashboard-card p-4">
+                                <p class="text-muted mb-1">Completed Sessions</p>
+                                <h3 class="fw-bold mb-0">18</h3>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="dashboard-card p-4">
+                                <p class="text-muted mb-1">Learning Progress</p>
+                                <h3 class="fw-bold mb-0">74%</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-card p-4">
+                        <h5 class="fw-semibold mb-3">Recommended Learning Path</h5>
+                        <div class="table-responsive">
+                            <table class="table align-middle">
+                                <thead>
+                                    <tr>
+                                        <th>Goal</th>
+                                        <th>Progress</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Career switch to Product Management</td>
+                                        <td>
+                                            <div class="progress" style="height: 8px;">
+                                                <div class="progress-bar" style="width: 70%"></div>
+                                            </div>
+                                        </td>
+                                        <td><span class="badge bg-success">On Track</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>System design prep for interviews</td>
+                                        <td>
+                                            <div class="progress" style="height: 8px;">
+                                                <div class="progress-bar" style="width: 55%"></div>
+                                            </div>
+                                        </td>
+                                        <td><span class="badge bg-warning text-dark">In Progress</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </main>
+        </div>
+        </asp:ContentPlaceHolder>
+        </div>
+    </form>
+
+    <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/main.js?v=6"></script>
+</body>
+</html>
