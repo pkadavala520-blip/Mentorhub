@@ -1019,9 +1019,9 @@ img.profile-avatar.profile-photo-empty {
     }
 }
 
-/* ==========================================================
+/* =
    MENTORHUB PREMIUM LOGIN PAGE IMPROVEMENTS
-   ========================================================== */
+   = */
 
 /* ---------- Background ---------- */
 
@@ -1432,12 +1432,12 @@ body {
     }
 }
 
-/* ===========================================================
+/* ==
    Page Transitions
    Applies a subtle fade + slight-slide to every page on load,
    and on exit (just before navigating to an internal link),
    handled together with assets/js/main.js (initPageTransitions).
-   =========================================================== */
+   == */
 
 @keyframes pt-page-enter {
     from {
@@ -1474,12 +1474,12 @@ body {
         }
 }
 
-/* ===========================================================
+/* ==
    Micro-interactions
    Small, consistent hover/press feedback for buttons, nav
    links and pills. Kept subtle to match the premium, low-key
    feel of the page transitions above.
-   =========================================================== */
+   == */
 
 .btn {
     transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.2s ease, background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;

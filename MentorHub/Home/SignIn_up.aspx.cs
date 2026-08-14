@@ -1,33 +1,27 @@
 ﻿using System;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Configuration;
 
-// namespaces for database
+
+//namespace
 using System.Data.SqlClient;
 using System.Data;
-using System.Configuration;
 using System.IO;
+
 
 namespace MentorHub.Home
 {
     public partial class SignIn_up : System.Web.UI.Page
     {
-        SqlConnection con;       // connection
-        SqlDataAdapter da;       // container
-        DataSet ds;              // select
-        SqlCommand cmd;          // insert, update, delete
 
+        SqlConnection con; //connnection
+        SqlDataAdapter da;  // container
+        DataSet ds;  //select
+        SqlCommand cmd; //insert,update,edit,delete
+
+        string s = ConfigurationManager.ConnectionStrings["MentorHubConnection"].ConnectionString;
         string fnm;
-
-        string s = ConfigurationManager
-            .ConnectionStrings["MentorHubConnection"]
-            .ConnectionString;
-
-
-        // =====================================================
-        // PAGE LOAD
-        // =====================================================
-
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -37,474 +31,272 @@ namespace MentorHub.Home
             }
         }
 
-
-        // =====================================================
-        // DATABASE CONNECTION
-        // =====================================================
-
+        //DATA CONNECTION
         void getcon()
         {
             con = new SqlConnection(s);
             con.Open();
         }
 
-
-        // =====================================================
-        // MENTOR IMAGE UPLOAD
-        // =====================================================
-
-        void mentorimgupload()
-        {
-            if (fuMentorPhoto.HasFile)
-            {
-                fnm = "images/" + fuMentorPhoto.FileName;
-
-                string folder =
-                    Server.MapPath("~/images/");
-
-                if (!Directory.Exists(folder))
-                {
-                    Directory.CreateDirectory(folder);
-                }
-
-                fuMentorPhoto.SaveAs(
-                    Server.MapPath("~/" + fnm)
-                );
-            }
-            else
-            {
-                fnm = "";
-            }
-        }
-
-
-        // =====================================================
-        // MENTEE IMAGE UPLOAD
-        // =====================================================
-
-        void menteeimgupload()
-        {
-            if (fuMenteePhoto.HasFile)
-            {
-                fnm = "images/" + fuMenteePhoto.FileName;
-
-                string folder =
-                    Server.MapPath("~/images/");
-
-                if (!Directory.Exists(folder))
-                {
-                    Directory.CreateDirectory(folder);
-                }
-
-                fuMenteePhoto.SaveAs(
-                    Server.MapPath("~/" + fnm)
-                );
-            }
-            else
-            {
-                fnm = "";
-            }
-        }
-
-
-        // =====================================================
-        // FILL MENTOR GRID
-        // =====================================================
-
+        //MENTOR GRID
         void fillMentorGrid()
         {
             getcon();
 
-            da = new SqlDataAdapter(
-                "select MentorID,FullName,Email,Phone," +
-                "ProfessionalTitle,Company,Experience," +
-                "Expertise,Skills,Availability,Status," +
-                "RegistrationDate from Mentor",
-                con
-            );
-
+            da = new SqlDataAdapter("Select *from Mentor",con);
             ds = new DataSet();
-
             da.Fill(ds);
 
             gvMentors.DataSource = ds;
-
             gvMentors.DataBind();
 
             con.Close();
+            
         }
 
-
-        // =====================================================
-        // FILL MENTEE GRID
-        // =====================================================
-
+        //MENTEE GRID
         void fillMenteeGrid()
         {
             getcon();
-
-            da = new SqlDataAdapter(
-                "select MenteeID,FullName,Email,Phone," +
-                "Education,College,CareerGoal,LearningGoal," +
-                "SkillsInterests,PreferredDomain,Status," +
-                "RegistrationDate from Mentee",
-                con
-            );
-
-            ds = new DataSet();
-
+            da = new SqlDataAdapter("select * from Mentee",con);
+            ds=new DataSet();
             da.Fill(ds);
 
             gvMentees.DataSource = ds;
-
             gvMentees.DataBind();
 
             con.Close();
         }
+        ///Image upload
+        void mentorimgupload()
+        {
+            fnm = "~/ProfilePhotos/Mentor/" + flpMentorProfilePhoto.FileName;
+            flpMentorProfilePhoto.SaveAs(Server.MapPath(fnm));
+        }
 
+        void menteeimgupload()
+        {
+            fnm = "~/ProfilePhotos/Mentee/" + flpMenteeProfilePhoto.FileName;
+            flpMenteeProfilePhoto.SaveAs(Server.MapPath(fnm));
+        }
 
-        // =====================================================
-        // CLEAR MENTOR FORM
-        // =====================================================
-
+        //CLEAR MENTOR
         void clearMentor()
         {
             txtMentorFullName.Text = "";
-
             txtMentorEmail.Text = "";
-
             txtMentorPassword.Text = "";
-
             txtMentorPhone.Text = "";
-
             txtProfessionalTitle.Text = "";
-
             txtCompany.Text = "";
-
             ddlExperience.SelectedIndex = -1;
-
             ddlExpertise.SelectedIndex = -1;
-
             txtMentorSkills.Text = "";
-
             ddlAvailability.SelectedIndex = -1;
-
             txtMentorBio.Text = "";
-
             chkMentorTerms.Checked = false;
         }
 
-
-        // =====================================================
-        // CLEAR MENTEE FORM
-        // =====================================================
-
+        //CLEAR METEE
         void clearMentee()
         {
             txtMenteeFullName.Text = "";
-
             txtMenteeEmail.Text = "";
-
             txtMenteePassword.Text = "";
-
             txtMenteePhone.Text = "";
-
             ddlEducation.SelectedIndex = -1;
-
             txtCollege.Text = "";
-
             ddlCareerGoal.SelectedIndex = -1;
-
             txtLearningGoal.Text = "";
-
             txtSkillsInterests.Text = "";
-
             ddlPreferredDomain.SelectedIndex = -1;
-
             txtMenteeBio.Text = "";
-
             chkMenteeTerms.Checked = false;
+
         }
+        // Mentor Registration
 
-
-        // =====================================================
-        // MENTOR REGISTER
-        // =====================================================
-
-        protected void btnMentorRegister_Click(
-            object sender,
-            EventArgs e)
+        protected void btnMentorRegister_Click(object sender, EventArgs e)
         {
-            if (Page.IsValid)
+            
+
+            if(btnMentorRegister.Text== "Create Mentor Account")
             {
                 getcon();
-
                 mentorimgupload();
+                
 
-                cmd = new SqlCommand(
-                    "insert into Mentor(" +
-                    "FullName,Email,PasswordHash,Phone," +
-                    "ProfessionalTitle,Company,Experience," +
-                    "Expertise,Skills,Availability,Bio," +
-                    "ProfilePhoto,TermsAccepted) " +
-
-                    "values('" +
-                    txtMentorFullName.Text + "','" +
-                    txtMentorEmail.Text + "','" +
-                    txtMentorPassword.Text + "','" +
-                    txtMentorPhone.Text + "','" +
-                    txtProfessionalTitle.Text + "','" +
-                    txtCompany.Text + "','" +
-                    ddlExperience.SelectedValue + "','" +
-                    ddlExpertise.SelectedValue + "','" +
-                    txtMentorSkills.Text + "','" +
-                    ddlAvailability.SelectedValue + "','" +
-                    txtMentorBio.Text + "','" +
-                    fnm + "'," +
-                    (chkMentorTerms.Checked ? "1" : "0") +
-                    ")",
-                    con
-                );
-
+                cmd=new SqlCommand("insert into Mentor(FullName,Email,Password,Phone,ProfessionalTitle,Company,Experience,Expertise,Skills,Availability,Bio,ProfilePhoto,TermsAccepted)" +
+                    " values ('"+ txtMentorFullName.Text+ "','"+ txtMentorEmail.Text+ "','"+ txtMentorPassword.Text+ "','"+ txtMentorPhone.Text+ "','"+ txtProfessionalTitle.Text+ "','"+ txtCompany .Text+ "','"+ ddlExperience.SelectedValue+ "','"+ ddlExpertise.Text + "','"+ txtMentorSkills.Text+ "','"+ ddlAvailability.SelectedValue+ "','"+ txtMentorBio .Text+ "','" + fnm + "','" + (chkMentorTerms.Checked ? "1" : "0")+"')", con);
                 cmd.ExecuteNonQuery();
-
-                con.Close();
 
                 clearMentor();
-
-                lblMentorMessage.Text =
-                    "Mentor Registration Successful!";
-
-                lblMentorMessage.CssClass =
-                    "d-block mb-3 text-success";
-
-                RegistrationSuccess.Value = "1";
-
+                con.Close();
                 fillMentorGrid();
+            }
+            else
+            {
+                //update
+                getcon();
+                cmd = new SqlCommand("update Mentor set FullName='" + txtMentorFullName.Text+ "',Email='" + txtMentorEmail.Text + "',Password='" + txtMentorPassword.Text + "',Phone='" + txtMentorPhone.Text + "',ProfessionalTitle='" + txtProfessionalTitle.Text + "',Company='" + txtCompany.Text +
+                    "',Experience='" + ddlExperience.SelectedValue +
+                    "',Expertise='" + ddlExpertise.Text +
+                    "',Skills='" + txtMentorSkills.Text +
+                    "',Availability='" + ddlAvailability.SelectedValue +
+                    "',Bio='" + txtMentorBio.Text +
+                    "',TermsAccepted='" + (chkMentorTerms.Checked ? "1" : "0") +
+                    "' where MentorID='" + ViewState["MentorID"] + "'", con);
 
+                cmd.ExecuteNonQuery();
+                clearMentor();
+                btnMentorRegister.Text = "Create Mentor Account";
+                con.Close();
+                fillMentorGrid();
+            }
+        }
+        // Mentee Registration
+
+        protected void btnMenteeRegister_Click(object sender, EventArgs e)
+        {
+            if (btnMenteeRegister.Text == "Create Mentee Account")
+            {
+                getcon();
+                menteeimgupload();
+
+                cmd = new SqlCommand("insert into Mentee(FullName,Email,Password,Phone,Education,College,CareerGoal,LearningGoal,SkillsInterests,PreferredDomain,Bio,ProfilePhoto,TermsAccepted) " +
+                    "values('"+ txtMenteeFullName.Text+ "','"+ txtMenteeEmail.Text+"','"+ txtMenteePassword.Text+ "','"+ txtMenteePhone.Text+ "','"+ ddlEducation.SelectedValue + "','"+ txtCollege .Text + "','"+ ddlCareerGoal.SelectedValue+ "','"+ txtLearningGoal.Text + "','"+ txtSkillsInterests.Text+ "','"+ ddlPreferredDomain.SelectedValue+ "','"+ txtMenteeBio.Text+ "','" + fnm + "','" + (chkMenteeTerms.Checked ? "1":"0")+"')", con);
+
+                cmd.ExecuteNonQuery();
+                clearMentee();
+                con.Close();
                 fillMenteeGrid();
+            }
+            else
+            {
+                //Update
+
+                getcon();
+                cmd = new SqlCommand("Update Mentee set FullName='" + txtMenteeFullName.Text +"',Email='" + txtMenteeEmail.Text +"',Password='" + txtMenteePassword.Text +"',Phone='" + txtMenteePhone.Text +"',Education='" + ddlEducation.SelectedValue +"',College='" + txtCollege.Text +"',CareerGoal='" + ddlCareerGoal.SelectedValue +"',LearningGoal='" + txtLearningGoal.Text +"',SkillsInterests='" + txtSkillsInterests.Text + "',PreferredDomain='" + ddlPreferredDomain.SelectedValue +"',Bio='" + txtMenteeBio.Text +"',TermsAccepted='" + (chkMenteeTerms.Checked ? "1" : "0") +  "' where MenteeID='" + ViewState["MenteeID"] + "'", con);
+                cmd.ExecuteNonQuery();
+                clearMentee();
+                btnMenteeRegister.Text = "Update Mentee Account";
+                con.Close();
+                fillMenteeGrid();
+            }
+            
+        }
+        //Mentor edit data
+        
+        void fillMentorData()
+        {
+            getcon();
+            da = new SqlDataAdapter("select * from Mentor where MentorID='" + ViewState["MentorID"] + "'", con);
+            ds = new DataSet();
+            da.Fill(ds);
+
+            //paring
+           
+                txtMentorFullName.Text = ds.Tables[0].Rows[0]["FullName"].ToString();
+                txtMentorEmail.Text = ds.Tables[0].Rows[0]["Email"].ToString();
+                txtMentorPassword.Text = ds.Tables[0].Rows[0]["Password"].ToString();
+                txtMentorPhone.Text = ds.Tables[0].Rows[0]["Phone"].ToString();
+                txtProfessionalTitle.Text = ds.Tables[0].Rows[0]["ProfessionalTitle"].ToString();
+                txtCompany.Text = ds.Tables[0].Rows[0]["Company"].ToString();
+                ddlExperience.SelectedValue = ds.Tables[0].Rows[0]["Experience"].ToString();
+                ddlExpertise.SelectedValue = ds.Tables[0].Rows[0]["Expertise"].ToString();
+                txtMentorSkills.Text = ds.Tables[0].Rows[0]["Skills"].ToString();
+                ddlAvailability.SelectedValue = ds.Tables[0].Rows[0]["Availability"].ToString();
+                txtMentorBio.Text = ds.Tables[0].Rows[0]["Bio"].ToString();
+                
+           
+            con.Close();
+
+        }
+
+        //Mentee edit data
+
+        void fillMenteeData()
+        {
+            getcon();
+            da = new SqlDataAdapter("select * from Mentee where MenteeID='" + ViewState["MenteeID"] + "'", con);
+            ds = new DataSet();
+            da.Fill(ds);
+
+            //paring
+           
+                txtMenteeFullName.Text = ds.Tables[0].Rows[0]["FullName"].ToString();
+                txtMenteeEmail.Text = ds.Tables[0].Rows[0]["Email"].ToString();
+                txtMenteePassword.Text = ds.Tables[0].Rows[0]["Password"].ToString();
+                txtMenteePhone.Text = ds.Tables[0].Rows[0]["Phone"].ToString();
+                ddlEducation.SelectedValue = ds.Tables[0].Rows[0]["Education"].ToString();
+                txtCollege.Text = ds.Tables[0].Rows[0]["College"].ToString();
+                ddlCareerGoal.SelectedValue = ds.Tables[0].Rows[0]["CareerGoal"].ToString();
+                txtLearningGoal.Text = ds.Tables[0].Rows[0]["LearningGoal"].ToString();
+                txtSkillsInterests.Text = ds.Tables[0].Rows[0]["SkillsInterests"].ToString();
+                ddlPreferredDomain.SelectedValue = ds.Tables[0].Rows[0]["PreferredDomain"].ToString();
+                txtMenteeBio.Text = ds.Tables[0].Rows[0]["Bio"].ToString();
+           
+            con.Close();
+
+        }
+        // Mentor edit and delete
+        protected void gvMentors_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            if (e.CommandName == "EditMentor")
+            {
+                int id=Convert.ToInt32(e.CommandArgument);
+                ViewState["MentorID"] = id;
+                btnMentorRegister.Text = "Update Mentor Account";
+                fillMentorData();
+            }
+            else if (e.CommandName == "DeleteMentor")
+            {
+                getcon();
+                cmd = new SqlCommand("delete from Mentor where MentorID='" + e.CommandArgument + "'", con);
+                cmd.ExecuteNonQuery();
+                con.Close();
+                fillMentorGrid();
             }
         }
 
+        //Mentee
 
-        // =====================================================
-        // MENTEE REGISTER
-        // =====================================================
-
-        protected void btnMenteeRegister_Click(
-            object sender,
-            EventArgs e)
+        protected void gvMentees_RowCommand(object sender, GridViewCommandEventArgs e)
         {
-            if (Page.IsValid)
+            if (e.CommandName == "EditMentee")
+            {
+                int id = Convert.ToInt32(e.CommandArgument);
+
+                ViewState["MenteeID"] = id;
+
+                btnMenteeRegister.Text = "Update Mentee Account";
+
+                fillMenteeData();
+            }
+            else if (e.CommandName == "DeleteMentee")
             {
                 getcon();
 
-                menteeimgupload();
-
-                cmd = new SqlCommand(
-                    "insert into Mentee(" +
-                    "FullName,Email,PasswordHash,Phone," +
-                    "Education,College,CareerGoal,LearningGoal," +
-                    "SkillsInterests,PreferredDomain,Bio," +
-                    "ProfilePhoto,TermsAccepted) " +
-
-                    "values('" +
-                    txtMenteeFullName.Text + "','" +
-                    txtMenteeEmail.Text + "','" +
-                    txtMenteePassword.Text + "','" +
-                    txtMenteePhone.Text + "','" +
-                    ddlEducation.SelectedValue + "','" +
-                    txtCollege.Text + "','" +
-                    ddlCareerGoal.SelectedValue + "','" +
-                    txtLearningGoal.Text + "','" +
-                    txtSkillsInterests.Text + "','" +
-                    ddlPreferredDomain.SelectedValue + "','" +
-                    txtMenteeBio.Text + "','" +
-                    fnm + "'," +
-                    (chkMenteeTerms.Checked ? "1" : "0") +
-                    ")",
-                    con
-                );
+                cmd = new SqlCommand("delete from Mentee where MenteeID='" + e.CommandArgument + "'", con);
 
                 cmd.ExecuteNonQuery();
 
                 con.Close();
 
-                clearMentee();
-
-                lblMenteeMessage.Text =
-                    "Mentee Registration Successful!";
-
-                lblMenteeMessage.CssClass =
-                    "d-block mb-3 text-success";
-
-                RegistrationSuccess.Value = "1";
-
-                fillMentorGrid();
-
                 fillMenteeGrid();
             }
         }
 
-
-        // =====================================================
-        // MENTOR TERMS
-        // =====================================================
-
-        protected void cvMentorTerms_ServerValidate(
-            object source,
-            ServerValidateEventArgs args)
+        protected void btnAdminLogin_Click(object sender, EventArgs e)
         {
-            args.IsValid =
-                chkMentorTerms.Checked;
         }
 
-
-        // =====================================================
-        // MENTEE TERMS
-        // =====================================================
-
-        protected void cvMenteeTerms_ServerValidate(
-            object source,
-            ServerValidateEventArgs args)
+        protected void btnMentorLogin_Click(object sender, EventArgs e)
         {
-            args.IsValid =
-                chkMenteeTerms.Checked;
         }
 
-
-        // =====================================================
-        // ADMIN LOGIN
-        // =====================================================
-
-        protected void btnAdminLogin_Click(
-            object sender,
-            EventArgs e)
+        protected void btnMenteeLogin_Click(object sender, EventArgs e)
         {
-            getcon();
-
-            cmd = new SqlCommand(
-                "select * from Admins " +
-                "where Email='" +
-                txtLoginEmail.Text +
-                "' and Password='" +
-                txtLoginPassword.Text + "'",
-                con
-            );
-
-            SqlDataReader dr =
-                cmd.ExecuteReader();
-
-            if (dr.Read())
-            {
-                Session["AdminEmail"] =
-                    txtLoginEmail.Text;
-
-                con.Close();
-
-                Response.Redirect(
-                    "~/Admin/AdminDashboard.aspx"
-                );
-            }
-            else
-            {
-                lblLoginMessage.Text =
-                    "Invalid Admin Email or Password.";
-
-                con.Close();
-            }
-        }
-
-
-        // =====================================================
-        // MENTOR LOGIN
-        // =====================================================
-
-        protected void btnMentorLogin_Click(
-            object sender,
-            EventArgs e)
-        {
-            getcon();
-
-            cmd = new SqlCommand(
-                "select * from Mentor " +
-                "where Email='" +
-                txtLoginEmail.Text +
-                "' and PasswordHash='" +
-                txtLoginPassword.Text + "'",
-                con
-            );
-
-            SqlDataReader dr =
-                cmd.ExecuteReader();
-
-            if (dr.Read())
-            {
-                Session["MentorID"] =
-                    dr["MentorID"].ToString();
-
-                Session["MentorName"] =
-                    dr["FullName"].ToString();
-
-                con.Close();
-
-                Response.Redirect(
-                    "~/Mentor/MentorDashboard.aspx"
-                );
-            }
-            else
-            {
-                lblLoginMessage.Text =
-                    "Invalid Mentor Email or Password.";
-
-                con.Close();
-            }
-        }
-
-
-        // =====================================================
-        // MENTEE LOGIN
-        // =====================================================
-
-        protected void btnMenteeLogin_Click(
-            object sender,
-            EventArgs e)
-        {
-            getcon();
-
-            cmd = new SqlCommand(
-                "select * from Mentee " +
-                "where Email='" +
-                txtLoginEmail.Text +
-                "' and PasswordHash='" +
-                txtLoginPassword.Text + "'",
-                con
-            );
-
-            SqlDataReader dr =
-                cmd.ExecuteReader();
-
-            if (dr.Read())
-            {
-                Session["MenteeID"] =
-                    dr["MenteeID"].ToString();
-
-                Session["MenteeName"] =
-                    dr["FullName"].ToString();
-
-                con.Close();
-
-                Response.Redirect(
-                    "~/Mentee/MenteeDashboard.aspx"
-                );
-            }
-            else
-            {
-                lblLoginMessage.Text =
-                    "Invalid Mentee Email or Password.";
-
-                con.Close();
-            }
         }
     }
 }

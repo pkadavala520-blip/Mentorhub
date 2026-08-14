@@ -267,13 +267,13 @@ namespace MentorHub.Home
         protected global::System.Web.UI.WebControls.TextBox txtMentorBio;
 
         /// <summary>
-        /// fuMentorPhoto control.
+        /// flpMentorProfilePhoto control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload fuMentorPhoto;
+        protected global::System.Web.UI.WebControls.FileUpload flpMentorProfilePhoto;
 
         /// <summary>
         /// chkMentorTerms control.
@@ -283,15 +283,6 @@ namespace MentorHub.Home
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CheckBox chkMentorTerms;
-
-        /// <summary>
-        /// cvMentorTerms control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CustomValidator cvMentorTerms;
 
         /// <summary>
         /// btnMentorRegister control.
@@ -492,13 +483,13 @@ namespace MentorHub.Home
         protected global::System.Web.UI.WebControls.TextBox txtMenteeBio;
 
         /// <summary>
-        /// fuMenteePhoto control.
+        /// flpMenteeProfilePhoto control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload fuMenteePhoto;
+        protected global::System.Web.UI.WebControls.FileUpload flpMenteeProfilePhoto;
 
         /// <summary>
         /// chkMenteeTerms control.
@@ -510,15 +501,6 @@ namespace MentorHub.Home
         protected global::System.Web.UI.WebControls.CheckBox chkMenteeTerms;
 
         /// <summary>
-        /// cvMenteeTerms control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CustomValidator cvMenteeTerms;
-
-        /// <summary>
         /// btnMenteeRegister control.
         /// </summary>
         /// <remarks>
@@ -526,6 +508,15 @@ namespace MentorHub.Home
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnMenteeRegister;
+
+        /// <summary>
+        /// registeredUsersSection control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl registeredUsersSection;
 
         /// <summary>
         /// gvMentors control.

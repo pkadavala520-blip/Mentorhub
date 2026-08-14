@@ -25,7 +25,7 @@ function loadSharedLayout() {
   loadPartial('site-footer', footerUrl);
 }
 
-/* ===========================================================
+/* ==
    Page Transitions
    Fades the current page out (see .pt-page-exit in styles.css)
    before following an internal link, so navigation between
@@ -33,7 +33,7 @@ function loadSharedLayout() {
    of an abrupt reload. Entrance animation is handled purely in
    CSS (pt-page-enter), so it still runs even if this script is
    slow to load.
-   =========================================================== */
+   == */
 function initPageTransitions() {
   var prefersReducedMotion = window.matchMedia(
     '(prefers-reduced-motion: reduce)'
@@ -271,7 +271,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  /* ===========================================================
+  /* ==
      Profile photo system
      - Placeholder ("no photo yet") state until the person uploads one.
      - "+" button / double-click on an existing photo opens a shared,
