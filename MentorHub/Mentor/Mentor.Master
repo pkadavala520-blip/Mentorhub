@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Mentor.master.cs" Inherits="MentorHub.Mentor.Mentor" %>
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Mentor.master.cs" Inherits="MentorHub.Mentor.Mentor" %>
 
 <!DOCTYPE html>
 
@@ -22,18 +22,19 @@
                     <aside class="sidebar p-3">
                         <h4 class="fw-bold mb-4"><i class="bi bi-person-badge me-2"></i>Mentor Panel</h4>
                         <nav class="nav flex-column">
-                            <a class="nav-link active" href="index.html"><i class="bi bi-speedometer2 me-2"></i>Dashboard</a>
-                            <a class="nav-link" href="profile.html"><i class="bi bi-person me-2"></i>My Profile</a>
-                            <a class="nav-link" href="my-skills.html"><i class="bi bi-lightbulb me-2"></i>My Skills</a>
-                            <a class="nav-link" href="availability.html"><i class="bi bi-calendar2-week me-2"></i>Availability</a>
-                            <a class="nav-link" href="requests.html"><i class="bi bi-ui-checks me-2"></i>Matching Requests</a>
-                            <a class="nav-link" href="mentees.html"><i class="bi bi-people me-2"></i>My Mentees</a>
-                            <a class="nav-link" href="messages.html"><i class="bi bi-chat-dots me-2"></i>Messages</a>
-                            <a class="nav-link" href="schedule.html"><i class="bi bi-calendar2-event me-2"></i>Schedule</a>
-                            <a class="nav-link" href="feedback.html"><i class="bi bi-star me-2"></i>Feedback</a>
-                            <a class="nav-link" href="settings.html"><i class="bi bi-gear me-2"></i>Settings</a>
-                            <a class="nav-link" href="../Home/login.html"><i class="bi bi-box-arrow-right me-2"></i>Logout</a>
+                            <a class="nav-link active" href="Index.aspx"><i class="bi bi-speedometer2 me-2"></i>Dashboard</a>
+                            <a class="nav-link" href="profile.aspx"><i class="bi bi-person me-2"></i>My Profile</a>
+                            <a class="nav-link" href="my-skills.aspx"><i class="bi bi-lightbulb me-2"></i>My Skills</a>
+                            <a class="nav-link" href="availability.aspx"><i class="bi bi-calendar2-week me-2"></i>Availability</a>
+                            <a class="nav-link" href="requests.aspx"><i class="bi bi-ui-checks me-2"></i>Matching Requests</a>
+                            <a class="nav-link" href="mentees.aspx"><i class="bi bi-people me-2"></i>My Mentees</a>
+                            <a class="nav-link" href="messages.aspx"><i class="bi bi-chat-dots me-2"></i>Messages</a>
+                            <a class="nav-link" href="schedule.aspx"><i class="bi bi-calendar2-event me-2"></i>Schedule</a>
+                            <a class="nav-link" href="feedback.aspx"><i class="bi bi-star me-2"></i>Feedback</a>
+                            <a class="nav-link" href="settings.aspx"><i class="bi bi-gear me-2"></i>Settings</a>
+                            <a class="nav-link" href="../Home/login.aspx"><i class="bi bi-box-arrow-right me-2"></i>Logout</a>
                         </nav>
+
                     </aside>
             </asp:ContentPlaceHolder>
 
@@ -105,6 +106,7 @@
         </div>
         </asp:ContentPlaceHolder>
         </div>
+   
     </form>
 
     <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -130,3 +132,4 @@
 
 </body>
 </html>
+

@@ -11,7 +11,7 @@ namespace MentorHub.Mentor
 {
 
 
-    public partial class Mentor_Index
+    public partial class Mentor_Mentee_Profile
     {
     }
 }

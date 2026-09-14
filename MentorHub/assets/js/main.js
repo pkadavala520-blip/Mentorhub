@@ -25,7 +25,7 @@ function loadSharedLayout() {
   loadPartial('site-footer', footerUrl);
 }
 
-/* ==
+/* ===========================================================
    Page Transitions
    Fades the current page out (see .pt-page-exit in styles.css)
    before following an internal link, so navigation between
@@ -33,7 +33,7 @@ function loadSharedLayout() {
    of an abrupt reload. Entrance animation is handled purely in
    CSS (pt-page-enter), so it still runs even if this script is
    slow to load.
-   == */
+   =========================================================== */
 function initPageTransitions() {
   var prefersReducedMotion = window.matchMedia(
     '(prefers-reduced-motion: reduce)'
@@ -271,7 +271,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  /* ==
+  /* ===========================================================
      Profile photo system
      - Placeholder ("no photo yet") state until the person uploads one.
      - "+" button / double-click on an existing photo opens a shared,
@@ -784,4 +784,325 @@ if (loginCard) {
         loginCard.style.transition = "transform .2s ease";
     });
 
-}
+}/* MentorHub - main.js
+   Shared shell behaviour: seed data store, sidebar toggle, dark mode,
+   notification dropdown, mini profile, badge counts, toasts.
+   Loaded on every page BEFORE mentor-app.js.
+*/
+(function () {
+  "use strict";
+
+  var STORE_KEY = "mh_state_v1";
+
+  /* ---------------------------------------------------------------- */
+  /* Seed data - only used the first time the app runs in a browser    */
+  /* ---------------------------------------------------------------- */
+  function seedState() {
+    return {
+      profile: {
+        name: "Daniel Ross",
+        title: "Lead Software Engineer | 10+ Years Experience",
+        bio: "I help students and professionals improve their software engineering skills through hands-on mentorship, interview prep, and career strategy.",
+        education: "M.Tech in Computer Science",
+        experience: "10+ years at Microsoft & Google",
+        skillsSummary: "Java, Python, System Design",
+        availability: "Mon-Fri, 7pm-10pm",
+        rating: 4.9,
+        reviews: 128,
+        initials: "DR"
+      },
+      skills: [
+        { id: "s1", name: "System Design", level: 90, category: "Engineering", icon: "bi-diagram-3" },
+        { id: "s2", name: "Java & Spring Boot", level: 85, category: "Engineering", icon: "bi-cup-hot" },
+        { id: "s3", name: "Python", level: 80, category: "Engineering", icon: "bi-filetype-py" },
+        { id: "s4", name: "Interview Preparation", level: 95, category: "Career", icon: "bi-clipboard-check" },
+        { id: "s5", name: "Career Strategy", level: 88, category: "Career", icon: "bi-signpost-split" },
+        { id: "s6", name: "Leadership & Management", level: 75, category: "Soft Skills", icon: "bi-people" }
+      ],
+      availability: {
+        Monday: [{ start: "19:00", end: "21:00" }],
+        Tuesday: [],
+        Wednesday: [{ start: "18:00", end: "20:00" }],
+        Thursday: [],
+        Friday: [{ start: "19:00", end: "21:00" }],
+        Saturday: [{ start: "10:00", end: "12:00" }],
+        Sunday: []
+      },
+      requests: [
+        { id: "r1", name: "Priya Nair", initials: "PN", focus: "Frontend Development", message: "Looking for guidance on moving from junior to mid-level React roles.", status: "pending", date: "2026-09-10" },
+        { id: "r2", name: "Arjun Mehta", initials: "AM", focus: "System Design", message: "Preparing for staff engineer interviews, would love mock sessions.", status: "pending", date: "2026-09-11" },
+        { id: "r3", name: "Naina Shah", initials: "NS", focus: "Product Management", message: "Career transition into product management, need a structured plan.", status: "accepted", date: "2026-08-20" },
+        { id: "r4", name: "Rohit Verma", initials: "RV", focus: "Backend Development", message: "Want help designing scalable backend systems.", status: "accepted", date: "2026-08-15" },
+        { id: "r5", name: "Sana Iyer", initials: "SI", focus: "Career Strategy", message: "Not the right stage for me yet, will revisit later.", status: "rejected", date: "2026-08-02" }
+      ],
+      mentees: [
+        { id: "m1", name: "Naina Shah", initials: "NS", focus: "Product Management", goal: "Career transition into product management", lastSession: "2 days ago", sessions: 8, progress: 72 },
+        { id: "m2", name: "Rohit Verma", initials: "RV", focus: "Backend Development", goal: "Scalable systems & distributed architecture", lastSession: "5 days ago", sessions: 12, progress: 64 },
+        { id: "m3", name: "Karan Thakur", initials: "KT", focus: "Interview Prep", goal: "Crack FAANG interviews within 6 months", lastSession: "1 week ago", sessions: 5, progress: 40 }
+      ],
+      conversations: [
+        {
+          id: "c1", name: "Naina Shah", initials: "NS", online: true, unread: 1,
+          messages: [
+            { from: "them", text: "Hi Daniel! Thanks again for the session yesterday.", time: "9:12 AM" },
+            { from: "me", text: "Anytime! How did the PM case study go?", time: "9:20 AM" },
+            { from: "them", text: "Went well, I used the framework we discussed.", time: "9:24 AM" }
+          ]
+        },
+        {
+          id: "c2", name: "Rohit Verma", initials: "RV", online: false, unread: 0,
+          messages: [
+            { from: "them", text: "Could we push our Thursday session to Friday?", time: "Yesterday" },
+            { from: "me", text: "Sure, Friday 7pm works on my end.", time: "Yesterday" }
+          ]
+        },
+        {
+          id: "c3", name: "Karan Thakur", initials: "KT", online: true, unread: 0,
+          messages: [
+            { from: "them", text: "Just finished the mock interview, feeling much better!", time: "Mon" }
+          ]
+        }
+      ],
+      notifications: [
+        { id: "n1", icon: "bi-ui-checks", title: "New matching request", text: "Priya Nair sent you a mentoring request.", time: "2h ago", read: false },
+        { id: "n2", icon: "bi-chat-dots", title: "New message", text: "Naina Shah sent you a message.", time: "3h ago", read: false },
+        { id: "n3", icon: "bi-calendar2-check", title: "Session reminder", text: "Session with Rohit Verma starts in 24 hours.", time: "1d ago", read: true },
+        { id: "n4", icon: "bi-star", title: "New review", text: "Karan Thakur left you a 5 star review.", time: "3d ago", read: true }
+      ],
+      reviews: [
+        { id: "rv1", name: "Naina Shah", initials: "NS", rating: 5, text: "Daniel's guidance completely changed how I approach product interviews. Structured, patient, and always practical.", date: "Sep 2026" },
+        { id: "rv2", name: "Rohit Verma", initials: "RV", rating: 5, text: "Deep technical knowledge and great at explaining trade-offs in system design.", date: "Aug 2026" },
+        { id: "rv3", name: "Karan Thakur", initials: "KT", rating: 4, text: "Very helpful mock interviews, would love even more of them.", date: "Aug 2026" }
+      ],
+      ratingBreakdown: { 5: 82, 4: 12, 3: 4, 2: 1, 1: 1 },
+      sessions: [
+        { date: "2026-09-17", time: "7:00 PM", title: "System Design Mock", mentee: "Rohit Verma" },
+        { date: "2026-09-19", time: "6:00 PM", title: "Career Strategy Session", mentee: "Naina Shah" },
+        { date: "2026-09-24", time: "7:30 PM", title: "Interview Prep", mentee: "Karan Thakur" },
+        { date: "2026-09-26", time: "10:00 AM", title: "1:1 Check-in", mentee: "Naina Shah" },
+        { date: "2026-09-29", time: "7:00 PM", title: "System Design Mock", mentee: "Rohit Verma" }
+      ],
+      settings: {
+        displayName: "Daniel Ross",
+        email: "daniel.ross@example.com",
+        emailNotif: true,
+        smsNotif: false,
+        darkMode: false
+      },
+      activity: [
+        { icon: "bi-ui-checks", text: "Accepted mentoring request from Rohit Verma", time: "2 days ago" },
+        { icon: "bi-calendar2-check", text: "Completed session with Naina Shah", time: "3 days ago" },
+        { icon: "bi-star-fill", text: "Received a 5-star review from Karan Thakur", time: "5 days ago" },
+        { icon: "bi-plus-circle", text: "Added a new availability slot on Wednesday", time: "1 week ago" }
+      ]
+    };
+  }
+
+  function loadState() {
+    try {
+      var raw = localStorage.getItem(STORE_KEY);
+      if (raw) return JSON.parse(raw);
+    } catch (e) { /* fall through to reseed */ }
+    var fresh = seedState();
+    saveState(fresh);
+    return fresh;
+  }
+
+  function saveState(state) {
+    try {
+      localStorage.setItem(STORE_KEY, JSON.stringify(state));
+    } catch (e) { /* storage unavailable - ignore */ }
+  }
+
+  var state = loadState();
+
+  /* ---------------------------------------------------------------- */
+  /* Toasts                                                            */
+  /* ---------------------------------------------------------------- */
+  function ensureToastHost() {
+    var host = document.querySelector(".mp-toast-host");
+    if (!host) {
+      host = document.createElement("div");
+      host.className = "mp-toast-host";
+      document.body.appendChild(host);
+    }
+    return host;
+  }
+
+  function toast(message, type) {
+    var host = ensureToastHost();
+    var el = document.createElement("div");
+    el.className = "mp-toast " + (type ? "mp-toast-" + type : "");
+    var icon = type === "success" ? "bi-check-circle-fill" : type === "danger" ? "bi-x-circle-fill" : "bi-info-circle-fill";
+    el.innerHTML = '<i class="bi ' + icon + '"></i><span>' + message + "</span>";
+    host.appendChild(el);
+    requestAnimationFrame(function () { el.classList.add("show"); });
+    setTimeout(function () {
+      el.classList.remove("show");
+      setTimeout(function () { el.remove(); }, 250);
+    }, 2600);
+  }
+
+  /* ---------------------------------------------------------------- */
+  /* Sidebar toggle (mobile / collapsed)                               */
+  /* ---------------------------------------------------------------- */
+  function initSidebarToggle() {
+    var btns = document.querySelectorAll("[data-sidebar-toggle]");
+    var sidebar = document.querySelector(".mp-sidebar");
+    if (!sidebar) return;
+    btns.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        sidebar.classList.toggle("mp-sidebar-open");
+        var expanded = sidebar.classList.contains("mp-sidebar-open");
+        btn.setAttribute("aria-expanded", expanded ? "true" : "false");
+      });
+    });
+    document.addEventListener("click", function (e) {
+      if (window.innerWidth > 991) return;
+      if (!sidebar.classList.contains("mp-sidebar-open")) return;
+      if (sidebar.contains(e.target)) return;
+      if ([].some.call(btns, function (b) { return b.contains(e.target); })) return;
+      sidebar.classList.remove("mp-sidebar-open");
+    });
+  }
+
+  /* ---------------------------------------------------------------- */
+  /* Dark mode                                                         */
+  /* ---------------------------------------------------------------- */
+  function applyDarkMode(on) {
+    document.documentElement.classList.toggle("mp-dark", !!on);
+    document.querySelectorAll("[data-dark-toggle]").forEach(function (input) {
+      input.checked = !!on;
+    });
+  }
+
+  function initDarkMode() {
+    applyDarkMode(state.settings.darkMode);
+    document.querySelectorAll("[data-dark-toggle]").forEach(function (input) {
+      input.addEventListener("change", function () {
+        state.settings.darkMode = input.checked;
+        saveState(state);
+        applyDarkMode(input.checked);
+      });
+    });
+  }
+
+  /* ---------------------------------------------------------------- */
+  /* Mini profile (sidebar + avatar dropdown)                          */
+  /* ---------------------------------------------------------------- */
+  function initMiniProfile() {
+    document.querySelectorAll("[data-mini-name]").forEach(function (el) {
+      el.textContent = state.profile.name;
+    });
+    document.querySelectorAll("[data-mini-avatar]").forEach(function (el) {
+      el.textContent = state.profile.initials;
+    });
+    document.querySelectorAll("[data-profile-name]").forEach(function (el) {
+      el.textContent = state.profile.name.split(" ")[0] === el.textContent ? state.profile.name.split(" ")[0] : el.textContent;
+    });
+  }
+
+  /* ---------------------------------------------------------------- */
+  /* Badges + notification dropdown (present on every page)            */
+  /* ---------------------------------------------------------------- */
+  function pendingRequestCount() {
+    return state.requests.filter(function (r) { return r.status === "pending"; }).length;
+  }
+  function unreadMessageCount() {
+    return state.conversations.reduce(function (sum, c) { return sum + (c.unread || 0); }, 0);
+  }
+  function unreadNotifCount() {
+    return state.notifications.filter(function (n) { return !n.read; }).length;
+  }
+
+  function refreshBadges() {
+    var reqCount = pendingRequestCount();
+    var msgCount = unreadMessageCount();
+    document.querySelectorAll('[data-badge="requests"]').forEach(function (el) {
+      el.textContent = reqCount;
+      el.style.display = reqCount > 0 ? "" : "none";
+    });
+    document.querySelectorAll('[data-badge="messages"]').forEach(function (el) {
+      el.textContent = msgCount;
+      el.style.display = msgCount > 0 ? "" : "none";
+    });
+    document.querySelectorAll("[data-notif-dot]").forEach(function (el) {
+      el.style.display = unreadNotifCount() > 0 ? "" : "none";
+    });
+  }
+
+  function renderNotifDropdown() {
+    var lists = document.querySelectorAll("[data-notif-list]");
+    if (!lists.length) return;
+    var items = state.notifications.slice(0, 5);
+    var html = items.length ? items.map(function (n) {
+      return '' +
+        '<div class="mp-notif-item ' + (n.read ? "" : "unread") + '">' +
+        '  <div class="mp-notif-icon"><i class="bi ' + n.icon + '"></i></div>' +
+        '  <div class="mp-notif-body">' +
+        '    <div class="mp-notif-title">' + n.title + "</div>" +
+        '    <div class="mp-notif-text">' + n.text + "</div>" +
+        '    <div class="mp-notif-time">' + n.time + "</div>" +
+        "  </div>" +
+        "</div>";
+    }).join("") : '<div class="text-muted small px-2 py-3">No notifications yet.</div>';
+    lists.forEach(function (el) { el.innerHTML = html; });
+  }
+
+  /* ---------------------------------------------------------------- */
+  /* Fade / stagger entrance animation                                 */
+  /* ---------------------------------------------------------------- */
+  function initEntranceAnimation() {
+    document.querySelectorAll(".fade-in").forEach(function (el, i) {
+      el.style.animationDelay = (i * 40) + "ms";
+    });
+  }
+
+  /* ---------------------------------------------------------------- */
+  /* Count-up stat animation                                           */
+  /* ---------------------------------------------------------------- */
+  function initCountUp() {
+    document.querySelectorAll("[data-countup]").forEach(function (el) {
+      var target = parseFloat(el.getAttribute("data-countup"));
+      var decimals = parseInt(el.getAttribute("data-decimals") || "0", 10);
+      if (isNaN(target)) return;
+      var start = 0;
+      var duration = 900;
+      var startTime = null;
+      function step(ts) {
+        if (!startTime) startTime = ts;
+        var progress = Math.min((ts - startTime) / duration, 1);
+        var eased = 1 - Math.pow(1 - progress, 3);
+        var value = start + (target - start) * eased;
+        el.textContent = decimals ? value.toFixed(decimals) : Math.round(value);
+        if (progress < 1) requestAnimationFrame(step);
+        else el.textContent = decimals ? target.toFixed(decimals) : target;
+      }
+      requestAnimationFrame(step);
+    });
+  }
+
+  /* ---------------------------------------------------------------- */
+  /* Public API used by mentor-app.js                                  */
+  /* ---------------------------------------------------------------- */
+  window.MentorApp = window.MentorApp || {};
+  window.MentorApp.state = state;
+  window.MentorApp.saveState = function () { saveState(state); refreshBadges(); renderNotifDropdown(); };
+  window.MentorApp.toast = toast;
+  window.MentorApp.refreshBadges = refreshBadges;
+  window.MentorApp.helpers = {
+    pendingRequestCount: pendingRequestCount,
+    unreadMessageCount: unreadMessageCount,
+    unreadNotifCount: unreadNotifCount
+  };
+
+  document.addEventListener("DOMContentLoaded", function () {
+    initSidebarToggle();
+    initDarkMode();
+    initMiniProfile();
+    refreshBadges();
+    renderNotifDropdown();
+    initEntranceAnimation();
+    initCountUp();
+  });
+})();

@@ -2,7 +2,7 @@ using System;
 
 namespace MentorHub.Mentor
 {
-    public partial class Mentor_Index : System.Web.UI.Page
+    public partial class Mentor_Add_Slot : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

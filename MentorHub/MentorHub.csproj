@@ -72,8 +72,10 @@
     <Content Include="App_Data\Mentorehubdb_log.ldf">
       <DependentUpon>Mentorehubdb.mdf</DependentUpon>
     </Content>
+    <Content Include="assets\css\mentor-panel.css" />
     <Content Include="assets\css\styles.css" />
     <Content Include="assets\js\main.js" />
+    <Content Include="assets\js\mentor-app.js" />
     <Content Include="assets\vendor\bootstrap-icons\font\bootstrap-icons.css" />
     <Content Include="assets\vendor\bootstrap\css\bootstrap.min.css" />
     <Content Include="assets\vendor\bootstrap\js\bootstrap.bundle.min.js" />
@@ -81,7 +83,20 @@
     <Content Include="Home\index.aspx" />
     <Content Include="Home\SignIn_up.aspx" />
     <Content Include="Mentee\Index.aspx" />
+    <Content Include="Mentor\add-slot.aspx" />
+    <Content Include="Mentor\availability.aspx" />
+    <Content Include="Mentor\edit-skills.aspx" />
+    <Content Include="Mentor\feedback.aspx" />
     <Content Include="Mentor\Index.aspx" />
+    <Content Include="Mentor\mentee-profile.aspx" />
+    <Content Include="Mentor\mentees.aspx" />
+    <Content Include="Mentor\messages.aspx" />
+    <Content Include="Mentor\my-skills.aspx" />
+    <Content Include="Mentor\notifications.aspx" />
+    <Content Include="Mentor\profile.aspx" />
+    <Content Include="Mentor\requests.aspx" />
+    <Content Include="Mentor\schedule.aspx" />
+    <Content Include="Mentor\settings.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -134,6 +149,34 @@
     <Compile Include="Mentee\Mentee.Master.designer.cs">
       <DependentUpon>Mentee.Master</DependentUpon>
     </Compile>
+    <Compile Include="Mentor\add-slot.aspx.cs">
+      <DependentUpon>add-slot.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mentor\add-slot.aspx.designer.cs">
+      <DependentUpon>add-slot.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mentor\availability.aspx.cs">
+      <DependentUpon>availability.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mentor\availability.aspx.designer.cs">
+      <DependentUpon>availability.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mentor\edit-skills.aspx.cs">
+      <DependentUpon>edit-skills.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mentor\edit-skills.aspx.designer.cs">
+      <DependentUpon>edit-skills.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mentor\feedback.aspx.cs">
+      <DependentUpon>feedback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mentor\feedback.aspx.designer.cs">
+      <DependentUpon>feedback.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Mentor\Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -141,12 +184,75 @@
     <Compile Include="Mentor\Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Mentor\mentee-profile.aspx.cs">
+      <DependentUpon>mentee-profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mentor\mentee-profile.aspx.designer.cs">
+      <DependentUpon>mentee-profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mentor\mentees.aspx.cs">
+      <DependentUpon>mentees.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mentor\mentees.aspx.designer.cs">
+      <DependentUpon>mentees.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Mentor\Mentor.Master.cs">
       <DependentUpon>Mentor.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Mentor\Mentor.Master.designer.cs">
       <DependentUpon>Mentor.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Mentor\messages.aspx.cs">
+      <DependentUpon>messages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mentor\messages.aspx.designer.cs">
+      <DependentUpon>messages.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mentor\my-skills.aspx.cs">
+      <DependentUpon>my-skills.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mentor\my-skills.aspx.designer.cs">
+      <DependentUpon>my-skills.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mentor\notifications.aspx.cs">
+      <DependentUpon>notifications.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mentor\notifications.aspx.designer.cs">
+      <DependentUpon>notifications.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mentor\profile.aspx.cs">
+      <DependentUpon>profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mentor\profile.aspx.designer.cs">
+      <DependentUpon>profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mentor\requests.aspx.cs">
+      <DependentUpon>requests.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mentor\requests.aspx.designer.cs">
+      <DependentUpon>requests.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mentor\schedule.aspx.cs">
+      <DependentUpon>schedule.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mentor\schedule.aspx.designer.cs">
+      <DependentUpon>schedule.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mentor\settings.aspx.cs">
+      <DependentUpon>settings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mentor\settings.aspx.designer.cs">
+      <DependentUpon>settings.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
