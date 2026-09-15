@@ -22,6 +22,7 @@ namespace MentorHub.Home
 
         string s = ConfigurationManager.ConnectionStrings["MentorHubConnection"].ConnectionString;
         string fnm;
+        int i;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -47,8 +48,8 @@ namespace MentorHub.Home
             ds = new DataSet();
             da.Fill(ds);
 
-            gvMentors.DataSource = ds;
-            gvMentors.DataBind();
+            //gvMentors.DataSource = ds;
+            //gvMentors.DataBind();
 
             con.Close();
             
@@ -62,8 +63,8 @@ namespace MentorHub.Home
             ds=new DataSet();
             da.Fill(ds);
 
-            gvMentees.DataSource = ds;
-            gvMentees.DataBind();
+            //gvMentees.DataSource = ds;
+            //gvMentees.DataBind();
 
             con.Close();
         }
@@ -289,10 +290,41 @@ namespace MentorHub.Home
 
         protected void btnAdminLogin_Click(object sender, EventArgs e)
         {
+            getcon();
+            if (!string.IsNullOrEmpty(txtLoginEmail.Text) && !string.IsNullOrEmpty(txtLoginPassword.Text))
+            {
+                cmd = new SqlCommand("select count(*) from Admins where Email='" + txtLoginEmail.Text + "'And PasswordHash='" + txtLoginPassword.Text + "'", con);
+                i = Convert.ToInt16(cmd.ExecuteScalar());
+                if (i>0)
+                {
+                    Response.Redirect("~/Admin/index.aspx");
+                }
+                else
+                {
+                    lblLoginMessage.Text = "Invalid Login & Password";
+                }
+            }
         }
 
         protected void btnMentorLogin_Click(object sender, EventArgs e)
         {
+            if ((!string.IsNullOrEmpty(txtLoginEmail.Text)) && !(string.IsNullOrEmpty(txtLoginPassword.Text)))
+            {
+                getcon();
+                cmd = new SqlCommand("SELECT count(*) FROM Mentor where Email='" + txtLoginEmail.Text + "' and Password='" + txtLoginPassword.Text + "' ", con);
+                cmd.ExecuteNonQuery();
+                i = Convert.ToInt16(cmd.ExecuteScalar());
+
+                if (i > 0)
+                {
+                    Session["MentorEmail"] = txtLoginEmail.Text;
+                    Response.Redirect("~/Mentor/Index.aspx");
+                }
+                else
+                {
+                    Response.Redirect("Invaild Email and Password");
+                }
+            }
         }
 
         protected void btnMenteeLogin_Click(object sender, EventArgs e)

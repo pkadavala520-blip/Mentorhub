@@ -67,6 +67,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Admin\add-category.aspx" />
+    <Content Include="Admin\add-mentee.aspx" />
+    <Content Include="Admin\add-mentor.aspx" />
+    <Content Include="Admin\add-skill.aspx" />
     <Content Include="Admin\index.aspx" />
     <Content Include="App_Data\Mentorehubdb.mdf" />
     <Content Include="App_Data\Mentorehubdb_log.ldf">
@@ -80,9 +84,31 @@
     <Content Include="assets\vendor\bootstrap\css\bootstrap.min.css" />
     <Content Include="assets\vendor\bootstrap\js\bootstrap.bundle.min.js" />
     <Content Include="assets\vendor\chartjs\chart.umd.js" />
+    <Content Include="Home\about.aspx" />
+    <Content Include="Home\contact.aspx" />
+    <Content Include="Home\faq.aspx" />
+    <Content Include="Home\features.aspx" />
+    <Content Include="Home\forgot-password.aspx" />
+    <Content Include="Home\how-it-works.aspx" />
     <Content Include="Home\index.aspx" />
+    <Content Include="Home\mentors.aspx" />
     <Content Include="Home\SignIn_up.aspx" />
+    <Content Include="Home\success-stories.aspx" />
+    <Content Include="Mentee\edit-profile.aspx" />
+    <Content Include="Mentee\feedback.aspx" />
+    <Content Include="Mentee\find-mentor.aspx" />
+    <Content Include="Mentee\goals.aspx" />
     <Content Include="Mentee\Index.aspx" />
+    <Content Include="Mentee\learning-goals.aspx" />
+    <Content Include="Mentee\messages.aspx" />
+    <Content Include="Mentee\my-mentor.aspx" />
+    <Content Include="Mentee\notifications.aspx" />
+    <Content Include="Mentee\profile.aspx" />
+    <Content Include="Mentee\recommemded.aspx" />
+    <Content Include="Mentee\requests.aspx" />
+    <Content Include="Mentee\schedule.aspx" />
+    <Content Include="Mentee\settings.aspx" />
+    <Content Include="Mentor\Mentor.Master" />
     <Content Include="Mentor\add-slot.aspx" />
     <Content Include="Mentor\availability.aspx" />
     <Content Include="Mentor\edit-skills.aspx" />
@@ -100,6 +126,34 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\add-category.aspx.cs">
+      <DependentUpon>add-category.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\add-category.aspx.designer.cs">
+      <DependentUpon>add-category.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\add-mentee.aspx.cs">
+      <DependentUpon>add-mentee.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\add-mentee.aspx.designer.cs">
+      <DependentUpon>add-mentee.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\add-mentor.aspx.cs">
+      <DependentUpon>add-mentor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\add-mentor.aspx.designer.cs">
+      <DependentUpon>add-mentor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\add-skill.aspx.cs">
+      <DependentUpon>add-skill.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\add-skill.aspx.designer.cs">
+      <DependentUpon>add-skill.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\Admin.Master.cs">
       <DependentUpon>Admin.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -114,12 +168,54 @@
     <Compile Include="Admin\index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Home\about.aspx.cs">
+      <DependentUpon>about.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home\about.aspx.designer.cs">
+      <DependentUpon>about.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\contact.aspx.cs">
+      <DependentUpon>contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home\contact.aspx.designer.cs">
+      <DependentUpon>contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\faq.aspx.cs">
+      <DependentUpon>faq.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home\faq.aspx.designer.cs">
+      <DependentUpon>faq.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\features.aspx.cs">
+      <DependentUpon>features.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home\features.aspx.designer.cs">
+      <DependentUpon>features.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\forgot-password.aspx.cs">
+      <DependentUpon>forgot-password.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home\forgot-password.aspx.designer.cs">
+      <DependentUpon>forgot-password.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Home\Home.Master.cs">
       <DependentUpon>Home.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Home\Home.Master.designer.cs">
       <DependentUpon>Home.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Home\how-it-works.aspx.cs">
+      <DependentUpon>how-it-works.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home\how-it-works.aspx.designer.cs">
+      <DependentUpon>how-it-works.aspx</DependentUpon>
     </Compile>
     <Compile Include="Home\index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
@@ -128,12 +224,54 @@
     <Compile Include="Home\index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Home\mentors.aspx.cs">
+      <DependentUpon>mentors.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home\mentors.aspx.designer.cs">
+      <DependentUpon>mentors.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Home\SignIn_up.aspx.cs">
       <DependentUpon>SignIn_up.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Home\SignIn_up.aspx.designer.cs">
       <DependentUpon>SignIn_up.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\success-stories.aspx.cs">
+      <DependentUpon>success-stories.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home\success-stories.aspx.designer.cs">
+      <DependentUpon>success-stories.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mentee\edit-profile.aspx.cs">
+      <DependentUpon>edit-profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mentee\edit-profile.aspx.designer.cs">
+      <DependentUpon>edit-profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mentee\feedback.aspx.cs">
+      <DependentUpon>feedback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mentee\feedback.aspx.designer.cs">
+      <DependentUpon>feedback.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mentee\find-mentor.aspx.cs">
+      <DependentUpon>find-mentor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mentee\find-mentor.aspx.designer.cs">
+      <DependentUpon>find-mentor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mentee\goals.aspx.cs">
+      <DependentUpon>goals.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mentee\goals.aspx.designer.cs">
+      <DependentUpon>goals.aspx</DependentUpon>
     </Compile>
     <Compile Include="Mentee\Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>
@@ -142,12 +280,75 @@
     <Compile Include="Mentee\Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Mentee\learning-goals.aspx.cs">
+      <DependentUpon>learning-goals.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mentee\learning-goals.aspx.designer.cs">
+      <DependentUpon>learning-goals.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Mentee\Mentee.Master.cs">
       <DependentUpon>Mentee.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Mentee\Mentee.Master.designer.cs">
       <DependentUpon>Mentee.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Mentee\messages.aspx.cs">
+      <DependentUpon>messages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mentee\messages.aspx.designer.cs">
+      <DependentUpon>messages.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mentee\my-mentor.aspx.cs">
+      <DependentUpon>my-mentor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mentee\my-mentor.aspx.designer.cs">
+      <DependentUpon>my-mentor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mentee\notifications.aspx.cs">
+      <DependentUpon>notifications.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mentee\notifications.aspx.designer.cs">
+      <DependentUpon>notifications.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mentee\profile.aspx.cs">
+      <DependentUpon>profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mentee\profile.aspx.designer.cs">
+      <DependentUpon>profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mentee\recommemded.aspx.cs">
+      <DependentUpon>recommemded.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mentee\recommemded.aspx.designer.cs">
+      <DependentUpon>recommemded.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mentee\requests.aspx.cs">
+      <DependentUpon>requests.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mentee\requests.aspx.designer.cs">
+      <DependentUpon>requests.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mentee\schedule.aspx.cs">
+      <DependentUpon>schedule.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mentee\schedule.aspx.designer.cs">
+      <DependentUpon>schedule.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mentee\settings.aspx.cs">
+      <DependentUpon>settings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mentee\settings.aspx.designer.cs">
+      <DependentUpon>settings.aspx</DependentUpon>
     </Compile>
     <Compile Include="Mentor\add-slot.aspx.cs">
       <DependentUpon>add-slot.aspx</DependentUpon>
@@ -260,9 +461,9 @@
     <Content Include="Admin\Admin.Master" />
     <Content Include="assets\vendor\bootstrap-icons\font\fonts\bootstrap-icons.woff" />
     <Content Include="assets\vendor\bootstrap-icons\font\fonts\bootstrap-icons.woff2" />
-    <Content Include="Home\Home.Master" />
-    <Content Include="Mentee\Mentee.Master" />
     <Content Include="Mentor\Mentor.Master" />
+    <Content Include="Mentee\Mentee.Master" />
+    <Content Include="Home\Home.Master" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

@@ -24,17 +24,17 @@
                     <aside class="sidebar p-3">
                         <h4 class="fw-bold mb-4"><i class="bi bi-person-hearts me-2"></i>Mentee Panel</h4>
                         <nav class="nav flex-column">
-                            <a class="nav-link active" href="index.html"><i class="bi bi-speedometer2 me-2"></i>Dashboard</a>
-                            <a class="nav-link" href="profile.html"><i class="bi bi-person me-2"></i>Profile</a>
-                            <a class="nav-link" href="find-mentor.html"><i class="bi bi-search me-2"></i>Find Mentor</a>
-                            <a class="nav-link" href="recommended.html"><i class="bi bi-stars me-2"></i>Recommended Mentors</a>
-                            <a class="nav-link" href="requests.html"><i class="bi bi-envelope me-2"></i>My Requests</a>
-                            <a class="nav-link" href="messages.html"><i class="bi bi-chat-dots me-2"></i>Messages</a>
-                            <a class="nav-link" href="schedule.html"><i class="bi bi-calendar2-event me-2"></i>Schedule</a>
-                            <a class="nav-link" href="goals.html"><i class="bi bi-bullseye me-2"></i>Learning Goals</a>
-                            <a class="nav-link" href="feedback.html"><i class="bi bi-star me-2"></i>Feedback</a>
-                            <a class="nav-link" href="settings.html"><i class="bi bi-gear me-2"></i>Settings</a>
-                            <a class="nav-link" href="../Home/login.html"><i class="bi bi-box-arrow-right me-2"></i>Logout</a>
+                            <a class="nav-link active" href="index.aspx"><i class="bi bi-speedometer2 me-2"></i>Dashboard</a>
+                            <a class="nav-link" href="profile.aspx"><i class="bi bi-person me-2"></i>Profile</a>
+                            <a class="nav-link" href="find-mentor.aspx"><i class="bi bi-search me-2"></i>Find Mentor</a>
+                            <a class="nav-link" href="recommemded.aspx"><i class="bi bi-stars me-2"></i>Recommended Mentors</a>
+                            <a class="nav-link" href="requests.aspx"><i class="bi bi-envelope me-2"></i>My Requests</a>
+                            <a class="nav-link" href="messages.aspx"><i class="bi bi-chat-dots me-2"></i>Messages</a>
+                            <a class="nav-link" href="schedule.aspx"><i class="bi bi-calendar2-event me-2"></i>Schedule</a>
+                            <a class="nav-link" href="goals.aspx"><i class="bi bi-bullseye me-2"></i>Learning Goals</a>
+                            <a class="nav-link" href="feedback.aspx"><i class="bi bi-star me-2"></i>Feedback</a>
+                            <a class="nav-link" href="settings.aspx"><i class="bi bi-gear me-2"></i>Settings</a>
+                            <a class="nav-link" href="../Home/SignIn_up.aspx"><i class="bi bi-box-arrow-right me-2"></i>Logout</a>
                         </nav>
                     </aside>
             </asp:ContentPlaceHolder>

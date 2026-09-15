@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.14.36811.4
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MentorHub", "Mentor\MentorHub.csproj", "{AFF99730-D1D6-4A31-A2A1-A191EED00538}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MentorHub", "MentorHub\MentorHub.csproj", "{AFF99730-D1D6-4A31-A2A1-A191EED00538}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

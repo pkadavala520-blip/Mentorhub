@@ -52,43 +52,43 @@
 
 
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#about">About
+                                    <a class="nav-link" href="about.aspx">About
                             </a>
                                 </li>
 
 
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#how-it-works">How it Works
+                                    <a class="nav-link" href="how-it-works.aspx">How it Works
                             </a>
                                 </li>
 
 
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#features">Features
+                                    <a class="nav-link" href="features.aspx">Features
                             </a>
                                 </li>
 
 
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#mentors">Mentors
+                                    <a class="nav-link" href="mentors.aspx">Mentors
                             </a>
                                 </li>
 
 
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#stories">Stories
+                                    <a class="nav-link" href="success-stories.aspx">Stories
                             </a>
                                 </li>
 
 
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#faq">FAQ
+                                    <a class="nav-link" href="faq.aspx">FAQ
                             </a>
                                 </li>
 
 
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#contact">Contact
+                                    <a class="nav-link" href="contact.aspx">Contact
                             </a>
                                 </li>
 
@@ -120,8 +120,8 @@
                                 <h1 class="display-5 fw-bold mb-3">Find the right mentor and accelerate your growth.</h1>
                                 <p class="lead text-muted mb-4">A modern mentor-mentee matching platform designed for students, professionals, and educators to connect, learn, and grow together.</p>
                                 <div class="d-flex flex-wrap gap-3">
-                                    <a href="login.html" class="btn gradient-btn">Create Account</a>
-                                    <a href="mentors.html" class="btn btn-outline-primary rounded-pill px-4">Explore Mentors</a>
+                                    <a href="SignIn_up.aspx" class="btn gradient-btn">Create Account</a>
+                                    <a href="mentors.aspx" class="btn btn-outline-primary rounded-pill px-4">Explore Mentors</a>
                                 </div>
                                 <div class="row mt-4 g-3">
                                     <div class="col-md-4">
@@ -200,7 +200,7 @@
                                         <h5 class="fw-semibold">Aisha Patel</h5>
                                         <p class="text-muted mb-2">Senior Product Designer</p>
                                         <div class="text-warning mb-3"><i class="bi bi-star-fill"></i>4.9</div>
-                                        <a href="login.html" class="btn gradient-btn w-100">View Profile</a>
+                                        <a href="SignIn_up.aspx" class="btn gradient-btn w-100">View Profile</a>
                                     </div>
                                 </div>
                             </div>
@@ -211,7 +211,7 @@
                                         <h5 class="fw-semibold">Daniel Ross</h5>
                                         <p class="text-muted mb-2">Lead Software Engineer</p>
                                         <div class="text-warning mb-3"><i class="bi bi-star-fill"></i>4.8</div>
-                                        <a href="login.html" class="btn gradient-btn w-100">View Profile</a>
+                                        <a href="SignIn_up.aspx" class="btn gradient-btn w-100">View Profile</a>
                                     </div>
                                 </div>
                             </div>
@@ -222,7 +222,7 @@
                                         <h5 class="fw-semibold">Meera Singh</h5>
                                         <p class="text-muted mb-2">Business Consultant</p>
                                         <div class="text-warning mb-3"><i class="bi bi-star-fill"></i>5.0</div>
-                                        <a href="login.html" class="btn gradient-btn w-100">View Profile</a>
+                                        <a href="SignIn_up.aspx" class="btn gradient-btn w-100">View Profile</a>
                                     </div>
                                 </div>
                             </div>
@@ -267,7 +267,7 @@
                             </div>
                         </div>
                         <div class="text-center mt-4 fade-in">
-                            <a href="how-it-works.html" class="btn btn-outline-primary rounded-pill px-4">See the full journey</a>
+                            <a href="how-it-works.aspx" class="btn btn-outline-primary rounded-pill px-4">See the full journey</a>
                         </div>
                     </div>
                 </section>
@@ -335,8 +335,8 @@
                             <h3 class="fw-bold mt-3 mb-2">Your next mentor is one click away.</h3>
                             <p class="text-muted mb-4">It's free to create an account and explore mentors across every domain.</p>
                             <div class="d-flex justify-content-center gap-3 flex-wrap">
-                                <a href="register.html" class="btn gradient-btn">Get Started Free</a>
-                                <a href="how-it-works.html" class="btn btn-outline-primary rounded-pill px-4">How it Works</a>
+                                <a href="SignIn_up.aspx" class="btn gradient-btn">Get Started Free</a>
+                                <a href="how-it-works.aspx" class="btn btn-outline-primary rounded-pill px-4">How it Works</a>
                             </div>
                         </div>
                     </div>
@@ -365,27 +365,27 @@
                             <div class="col-lg-2 col-md-4">
                                 <h6 class="text-white mb-3">Explore</h6>
                                 <ul class="list-unstyled small">
-                                    <li class="mb-2"><a href="about.html" class="text-light">About</a></li>
-                                    <li class="mb-2"><a href="features.html" class="text-light">Features</a></li>
-                                    <li class="mb-2"><a href="mentors.html" class="text-light">Mentors</a></li>
-                                    <li><a href="success-stories.html" class="text-light">Stories</a></li>
+                                    <li class="mb-2"><a href="about.aspx" class="text-light">About</a></li>
+                                    <li class="mb-2"><a href="features.aspx" class="text-light">Features</a></li>
+                                    <li class="mb-2"><a href="mentors.aspx" class="text-light">Mentors</a></li>
+                                    <li><a href="success-stories.aspx" class="text-light">Stories</a></li>
                                 </ul>
                             </div>
                             <div class="col-lg-3 col-md-4">
                                 <h6 class="text-white mb-3">Support</h6>
                                 <ul class="list-unstyled small">
-                                    <li class="mb-2"><a href="faq.html" class="text-light">FAQ</a></li>
-                                    <li class="mb-2"><a href="contact.html" class="text-light">Contact</a></li>
-                                    <li class="mb-2"><a href="forgot-password.html" class="text-light">Forgot Password</a></li>
-                                    <li><a href="login.html" class="text-light">Sign In</a></li>
+                                    <li class="mb-2"><a href="faq.aspx" class="text-light">FAQ</a></li>
+                                    <li class="mb-2"><a href="contact.aspx" class="text-light">Contact</a></li>
+                                    <li class="mb-2"><a href="forgot-password.aspx" class="text-light">Forgot Password</a></li>
+                                    <li><a href="SignIn_up.aspx" class="text-light">Sign In</a></li>
                                 </ul>
                             </div>
                             <div class="col-lg-3 col-md-4">
                                 <h6 class="text-white mb-3">Get Started</h6>
                                 <ul class="list-unstyled small">
-                                    <li class="mb-2"><a href="register.html" class="text-light">Sign Up</a></li>
-                                    <li class="mb-2"><a href="how-it-works.html" class="text-light">How it Works</a></li>
-                                    <li><a href="contact.html" class="text-light">Book a Demo</a></li>
+                                    <li class="mb-2"><a href="SignIn_up.aspx" class="text-light">Sign Up</a></li>
+                                    <li class="mb-2"><a href="how-it-works.aspx" class="text-light">How it Works</a></li>
+                                    <li><a href="contact.aspx" class="text-light">Book a Demo</a></li>
                                 </ul>
                             </div>
                         </div>

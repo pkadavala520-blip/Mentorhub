@@ -593,6 +593,7 @@
                                 <p>
                                     Build meaningful mentorship connections
                                 and achieve your goals with MentorHub.
+                               
                                 </p>
 
                                 <ul class="side-feature-list">
@@ -638,6 +639,7 @@
                                 <p>
                                     Create your Mentor or Mentee account
                                 and start your learning journey.
+                               
                                 </p>
 
                                 <ul class="side-feature-list">
@@ -720,6 +722,7 @@
                                 role="tab">
                                 Sign In
 
+                           
                             </button>
 
                         </li>
@@ -739,6 +742,7 @@
                                 role="tab">
                                 Sign Up
 
+                           
                             </button>
 
                         </li>
@@ -766,6 +770,7 @@
 
                                 <p class="login-subtitle mb-0">
                                     Choose your role to continue
+                               
                                 </p>
 
                             </div>
@@ -777,6 +782,7 @@
 
                                 <label class="form-label">
                                     Email
+                               
                                 </label>
 
                                 <asp:TextBox
@@ -790,11 +796,11 @@
 
 
                             <!-- PASSWORD -->
-                            word men
-                            <div class="mb-2">
+                            &nbsp;<div class="mb-2">
 
                                 <label class="form-label">
                                     Password
+                               
                                 </label>
 
                                 <asp:TextBox
@@ -822,7 +828,7 @@
 
                                 </label>
 
-                                <a href="#"
+                                <a href="forgot-password.aspx"
                                     class="forgot-link">Forgot password?
                                 </a>
 
@@ -884,11 +890,13 @@
                                   mb-0">
                                 Don't have an account?
 
-                            <a href="#"
-                                class="js-tab-switch"
-                                data-target-tab="register-tab">Sign Up
+                           
 
-                            </a>
+                                <a href="#"
+                                    class="js-tab-switch"
+                                    data-target-tab="register-tab">Sign Up
+
+                                </a>
 
                             </p>
 
@@ -916,6 +924,7 @@
 
                                     <p class="text-muted">
                                         Choose Mentor or Mentee
+                                   
                                     </p>
 
                                 </div>
@@ -947,6 +956,7 @@
 
                                             <p class="small text-muted">
                                                 Share knowledge and experience.
+                                           
                                             </p>
 
                                             <span
@@ -985,6 +995,7 @@
 
                                             <p class="small text-muted">
                                                 Find a mentor and achieve your goals.
+                                           
                                             </p>
 
                                             <span
@@ -1020,6 +1031,7 @@
                                     <i class="bi bi-arrow-left"></i>
                                     Back
 
+                               
                                 </button>
 
                                 <h2 class="fw-bold registration-title">
@@ -1035,6 +1047,7 @@
 
                                 <p class="text-muted">
                                     Fill in your details to create your mentor account.
+                               
                                 </p>
 
 
@@ -1053,6 +1066,7 @@
 
                                         <label class="form-label">
                                             Full Name *
+                                       
                                         </label>
 
                                         <asp:TextBox
@@ -1079,6 +1093,7 @@
 
                                         <label class="form-label">
                                             Email *
+                                       
                                         </label>
 
                                         <asp:TextBox
@@ -1106,6 +1121,7 @@
 
                                         <label class="form-label">
                                             Password *
+                                       
                                         </label>
 
                                         <asp:TextBox
@@ -1133,6 +1149,7 @@
 
                                         <label class="form-label">
                                             Phone *
+                                       
                                         </label>
 
                                         <asp:TextBox
@@ -1160,6 +1177,7 @@
 
                                         <label class="form-label">
                                             Professional Title *
+                                       
                                         </label>
 
                                         <asp:TextBox
@@ -1186,6 +1204,7 @@
 
                                         <label class="form-label">
                                             Company / Organization
+                                       
                                         </label>
 
                                         <asp:TextBox
@@ -1203,6 +1222,7 @@
 
                                         <label class="form-label">
                                             Experience *
+                                       
                                         </label>
 
                                         <asp:DropDownList
@@ -1251,6 +1271,7 @@
 
                                         <label class="form-label">
                                             Expertise *
+                                       
                                         </label>
 
                                         <asp:DropDownList
@@ -1307,6 +1328,7 @@
 
                                         <label class="form-label">
                                             Skills
+                                       
                                         </label>
 
                                         <asp:TextBox
@@ -1324,6 +1346,7 @@
 
                                         <label class="form-label">
                                             Availability *
+                                       
                                         </label>
 
                                         <asp:DropDownList
@@ -1368,6 +1391,7 @@
 
                                         <label class="form-label">
                                             Bio
+                                       
                                         </label>
 
                                         <asp:TextBox
@@ -1386,6 +1410,7 @@
 
                                         <label class="form-label">
                                             Profile Photo
+                                       
                                         </label>
 
                                         <asp:FileUpload
@@ -1445,6 +1470,7 @@
                                     <i class="bi bi-arrow-left"></i>
                                     Back
 
+                               
                                 </button>
 
 
@@ -1462,6 +1488,7 @@
 
                                 <p class="text-muted">
                                     Fill in your details to create your mentee account.
+                               
                                 </p>
 
 
@@ -1480,6 +1507,7 @@
 
                                         <label class="form-label">
                                             Full Name *
+                                       
                                         </label>
 
                                         <asp:TextBox
@@ -1506,6 +1534,7 @@
 
                                         <label class="form-label">
                                             Email *
+                                       
                                         </label>
 
                                         <asp:TextBox
@@ -1533,6 +1562,7 @@
 
                                         <label class="form-label">
                                             Password *
+                                       
                                         </label>
 
                                         <asp:TextBox
@@ -1560,6 +1590,7 @@
 
                                         <label class="form-label">
                                             Phone *
+                                       
                                         </label>
 
                                         <asp:TextBox
@@ -1587,6 +1618,7 @@
 
                                         <label class="form-label">
                                             Education *
+                                       
                                         </label>
 
                                         <asp:DropDownList
@@ -1643,6 +1675,7 @@
 
                                         <label class="form-label">
                                             College / University *
+                                       
                                         </label>
 
                                         <asp:TextBox
@@ -1669,6 +1702,7 @@
 
                                         <label class="form-label">
                                             Career Goal *
+                                       
                                         </label>
 
                                         <asp:DropDownList
@@ -1721,6 +1755,7 @@
 
                                         <label class="form-label">
                                             Learning Goal *
+                                       
                                         </label>
 
                                         <asp:TextBox
@@ -1747,6 +1782,7 @@
 
                                         <label class="form-label">
                                             Skills / Interests
+                                       
                                         </label>
 
                                         <asp:TextBox
@@ -1764,6 +1800,7 @@
 
                                         <label class="form-label">
                                             Preferred Domain *
+                                       
                                         </label>
 
                                         <asp:DropDownList
@@ -1820,6 +1857,7 @@
 
                                         <label class="form-label">
                                             Bio
+                                       
                                         </label>
 
                                         <asp:TextBox
@@ -1838,6 +1876,7 @@
 
                                         <label class="form-label">
                                             Profile Photo
+                                       
                                         </label>
 
                                         <asp:FileUpload
@@ -1905,7 +1944,7 @@
          REGISTERED MENTORS
          ============================================= -->
 
-        <div
+        <%--<div
             id="registeredUsersSection"
             runat="server"
             class="registered-users-section">
@@ -1916,7 +1955,7 @@
 
                 <!-- HEADER -->
 
-                <div class="registered-section-header">
+                               <div class="registered-section-header">
 
                     <h4>
 
@@ -2073,21 +2112,21 @@
 
                             </asp:TemplateField>
 
-                           <asp:TemplateField HeaderText="Profile Photo">
+                            <asp:TemplateField HeaderText="Profile Photo">
 
-    <ItemTemplate>
+                                <ItemTemplate>
 
-        <asp:Image
-            ID="imgMentorProfile"
-            runat="server"
-            ImageUrl='<%# ResolveUrl(Eval("ProfilePhoto").ToString()) %>'
-            Width="80px"
-            Height="80px"
-            Style="object-fit: cover;" />
+                                    <asp:Image
+                                        ID="imgMentorProfile"
+                                        runat="server"
+                                        ImageUrl='<%# ResolveUrl(Eval("ProfilePhoto").ToString()) %>'
+                                        Width="80px"
+                                        Height="80px"
+                                        Style="object-fit: cover;" />
 
-    </ItemTemplate>
+                                </ItemTemplate>
 
-</asp:TemplateField>
+                            </asp:TemplateField>
 
 
 
@@ -2130,13 +2169,13 @@
                     </asp:GridView>
 
                 </div>
-
             </div>
+        --%>
 
 
 
 
-            <div class="registered-section-card">
+        <%--  <div class="registered-section-card">
 
 
                 <!-- HEADER -->
@@ -2160,7 +2199,7 @@
 
                 <!-- MENTEE GRID -->
 
-                <div class="registered-table-container">
+                                <div class="registered-table-container">
 
                     <asp:GridView
                         ID="gvMentees"
@@ -2300,19 +2339,19 @@
 
                             <asp:TemplateField HeaderText="Profile Photo">
 
-    <ItemTemplate>
+                                <ItemTemplate>
 
-        <asp:Image
-            ID="imgMenteeProfile"
-            runat="server"
-            ImageUrl='<%# ResolveUrl(Eval("ProfilePhoto").ToString()) %>'
-            Width="80px"
-            Height="80px"
-            Style="object-fit: cover;" />
+                                    <asp:Image
+                                        ID="imgMenteeProfile"
+                                        runat="server"
+                                        ImageUrl='<%# ResolveUrl(Eval("ProfilePhoto").ToString()) %>'
+                                        Width="80px"
+                                        Height="80px"
+                                        Style="object-fit: cover;" />
 
-    </ItemTemplate>
+                                </ItemTemplate>
 
-</asp:TemplateField>
+                            </asp:TemplateField>
 
 
                             <asp:TemplateField HeaderText="Edit">
@@ -2354,271 +2393,270 @@
                     </asp:GridView>
 
                 </div>
+    </div>
 
-            </div>
-
-        </div>
-
-
-        <!-- BOOTSTRAP JS -->
-
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    </div>--%>
 
 
-        <!-- JAVASCRIPT -->
+    <!-- BOOTSTRAP JS -->
 
-        <script type="text/javascript">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-            (function () {
 
-                var roleStep =
-                    document.getElementById("reg-step-role");
+    <!-- JAVASCRIPT -->
 
-                var mentorStep =
-                    document.getElementById("reg-step-mentor");
+    <script type="text/javascript">
 
-                var menteeStep =
-                    document.getElementById("reg-step-mentee");
+        (function () {
 
-                var selectedRole =
-                    document.getElementById(
+            var roleStep =
+                document.getElementById("reg-step-role");
+
+            var mentorStep =
+                document.getElementById("reg-step-mentor");
+
+            var menteeStep =
+                document.getElementById("reg-step-mentee");
+
+            var selectedRole =
+                document.getElementById(
                     "<%= SelectedRole.ClientID %>"
                     );
 
 
-                /* SHOW ROLE SELECTION */
+            /* SHOW ROLE SELECTION */
 
-                function showRoleSelection() {
+            function showRoleSelection() {
 
-                    if (roleStep)
-                        roleStep.style.display = "";
+                if (roleStep)
+                    roleStep.style.display = "";
 
-                    if (mentorStep)
-                        mentorStep.style.display = "none";
+                if (mentorStep)
+                    mentorStep.style.display = "none";
 
-                    if (menteeStep)
-                        menteeStep.style.display = "none";
+                if (menteeStep)
+                    menteeStep.style.display = "none";
 
-                    if (selectedRole)
-                        selectedRole.value = "";
+                if (selectedRole)
+                    selectedRole.value = "";
 
-                }
-
-
-                /* SHOW MENTOR */
-
-                function showMentor() {
-
-                    if (roleStep)
-                        roleStep.style.display = "none";
-
-                    if (mentorStep)
-                        mentorStep.style.display = "";
-
-                    if (menteeStep)
-                        menteeStep.style.display = "none";
-
-                    if (selectedRole)
-                        selectedRole.value = "mentor";
-
-                }
+            }
 
 
-                /* SHOW MENTEE */
+            /* SHOW MENTOR */
 
-                function showMentee() {
+            function showMentor() {
 
-                    if (roleStep)
-                        roleStep.style.display = "none";
+                if (roleStep)
+                    roleStep.style.display = "none";
 
-                    if (mentorStep)
-                        mentorStep.style.display = "none";
+                if (mentorStep)
+                    mentorStep.style.display = "";
 
-                    if (menteeStep)
-                        menteeStep.style.display = "";
+                if (menteeStep)
+                    menteeStep.style.display = "none";
 
-                    if (selectedRole)
-                        selectedRole.value = "mentee";
+                if (selectedRole)
+                    selectedRole.value = "mentor";
 
-                }
-
-
-                /* ROLE CARD */
-
-                document
-                    .querySelectorAll(".role-card")
-                    .forEach(function (card) {
-
-                        card.addEventListener(
-                            "click",
-                            function () {
-
-                                var role =
-                                    card.getAttribute("data-role");
-
-                                if (role === "mentor") {
-
-                                    showMentor();
-
-                                }
-
-                                else if (role === "mentee") {
-
-                                    showMentee();
-
-                                }
-
-                            }
-                        );
-
-                    });
+            }
 
 
-                /* BACK BUTTON */
+            /* SHOW MENTEE */
 
-                document
-                    .querySelectorAll(".reg-back")
-                    .forEach(function (button) {
+            function showMentee() {
 
-                        button.addEventListener(
-                            "click",
-                            function () {
+                if (roleStep)
+                    roleStep.style.display = "none";
 
-                                showRoleSelection();
+                if (mentorStep)
+                    mentorStep.style.display = "none";
 
-                            }
-                        );
+                if (menteeStep)
+                    menteeStep.style.display = "";
 
-                    });
+                if (selectedRole)
+                    selectedRole.value = "mentee";
 
-
-                /* LOGIN -> SIGN UP */
-
-                document
-                    .querySelectorAll(".js-tab-switch")
-                    .forEach(function (link) {
-
-                        link.addEventListener(
-                            "click",
-                            function (e) {
-
-                                e.preventDefault();
-
-                                var target =
-                                    document.getElementById(
-                                        link.getAttribute(
-                                            "data-target-tab"
-                                        )
-                                    );
-
-                                if (
-                                    target &&
-                                    window.bootstrap
-                                ) {
-
-                                    var tab =
-                                        bootstrap.Tab
-                                            .getOrCreateInstance(target);
-
-                                    tab.show();
-
-                                }
-
-                            }
-                        );
-
-                    });
+            }
 
 
-                /* SIGN UP TAB */
+            /* ROLE CARD */
 
-                var registerTab =
-                    document.getElementById("register-tab");
+            document
+                .querySelectorAll(".role-card")
+                .forEach(function (card) {
 
-                if (registerTab) {
-
-                    registerTab.addEventListener(
-                        "shown.bs.tab",
+                    card.addEventListener(
+                        "click",
                         function () {
 
-                            var signInPanel =
-                                document.getElementById(
-                                    "leftpanel-signin"
-                                );
+                            var role =
+                                card.getAttribute("data-role");
 
-                            var signUpPanel =
-                                document.getElementById(
-                                    "leftpanel-signup"
-                                );
+                            if (role === "mentor") {
 
-                            if (signInPanel)
-                                signInPanel.style.display = "none";
+                                showMentor();
 
-                            if (signUpPanel)
-                                signUpPanel.style.display = "";
+                            }
+
+                            else if (role === "mentee") {
+
+                                showMentee();
+
+                            }
 
                         }
                     );
 
-                }
+                });
 
 
-                /* SIGN IN TAB */
+            /* BACK BUTTON */
 
-                var loginTab =
-                    document.getElementById("login-tab");
+            document
+                .querySelectorAll(".reg-back")
+                .forEach(function (button) {
 
-                if (loginTab) {
-
-                    loginTab.addEventListener(
-                        "shown.bs.tab",
+                    button.addEventListener(
+                        "click",
                         function () {
 
-                            var signInPanel =
-                                document.getElementById(
-                                    "leftpanel-signin"
-                                );
-
-                            var signUpPanel =
-                                document.getElementById(
-                                    "leftpanel-signup"
-                                );
-
-                            if (signInPanel)
-                                signInPanel.style.display = "";
-
-                            if (signUpPanel)
-                                signUpPanel.style.display = "none";
+                            showRoleSelection();
 
                         }
                     );
 
-                }
+                });
 
 
-                /* RESTORE ROLE AFTER POSTBACK */
+            /* LOGIN -> SIGN UP */
 
-                if (
-                    selectedRole &&
-                    selectedRole.value === "mentor"
-                ) {
+            document
+                .querySelectorAll(".js-tab-switch")
+                .forEach(function (link) {
 
-                    showMentor();
+                    link.addEventListener(
+                        "click",
+                        function (e) {
 
-                }
+                            e.preventDefault();
 
-                else if (
-                    selectedRole &&
-                    selectedRole.value === "mentee"
-                ) {
+                            var target =
+                                document.getElementById(
+                                    link.getAttribute(
+                                        "data-target-tab"
+                                    )
+                                );
 
-                    showMentee();
+                            if (
+                                target &&
+                                window.bootstrap
+                            ) {
 
-                }
+                                var tab =
+                                    bootstrap.Tab
+                                        .getOrCreateInstance(target);
 
-            })();
+                                tab.show();
 
-        </script>
+                            }
+
+                        }
+                    );
+
+                });
+
+
+            /* SIGN UP TAB */
+
+            var registerTab =
+                document.getElementById("register-tab");
+
+            if (registerTab) {
+
+                registerTab.addEventListener(
+                    "shown.bs.tab",
+                    function () {
+
+                        var signInPanel =
+                            document.getElementById(
+                                "leftpanel-signin"
+                            );
+
+                        var signUpPanel =
+                            document.getElementById(
+                                "leftpanel-signup"
+                            );
+
+                        if (signInPanel)
+                            signInPanel.style.display = "none";
+
+                        if (signUpPanel)
+                            signUpPanel.style.display = "";
+
+                    }
+                );
+
+            }
+
+
+            /* SIGN IN TAB */
+
+            var loginTab =
+                document.getElementById("login-tab");
+
+            if (loginTab) {
+
+                loginTab.addEventListener(
+                    "shown.bs.tab",
+                    function () {
+
+                        var signInPanel =
+                            document.getElementById(
+                                "leftpanel-signin"
+                            );
+
+                        var signUpPanel =
+                            document.getElementById(
+                                "leftpanel-signup"
+                            );
+
+                        if (signInPanel)
+                            signInPanel.style.display = "";
+
+                        if (signUpPanel)
+                            signUpPanel.style.display = "none";
+
+                    }
+                );
+
+            }
+
+
+            /* RESTORE ROLE AFTER POSTBACK */
+
+            if (
+                selectedRole &&
+                selectedRole.value === "mentor"
+            ) {
+
+                showMentor();
+
+            }
+
+            else if (
+                selectedRole &&
+                selectedRole.value === "mentee"
+            ) {
+
+                showMentee();
+
+            }
+
+        })();
+
+    </script>
 
     </div>
 

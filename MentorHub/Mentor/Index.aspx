@@ -82,7 +82,8 @@
           <div class="mp-hero-content d-flex flex-wrap justify-content-between align-items-center gap-3">
             <div>
               <span class="mp-page-eyebrow" style="background:rgba(255,255,255,0.18);color:#fff;"><i class="bi bi-stars"></i>Your mentor workspace</span>
-              <h2 class="fw-bold mt-3 mb-1">Welcome back, <span data-profile-name>Daniel</span> 👋</h2>
+              <h2 class="fw-bold mt-3 mb-1"> <span data-profile-name>
+    <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label></span> </h2>
               <p class="mb-0" style="opacity:.9;">Here's what's happening with your mentees today.</p>
             </div>
             <div class="d-flex gap-2">
