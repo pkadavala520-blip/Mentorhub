@@ -11,52 +11,52 @@ namespace MentorHub.Admin
 {
 
 
-    public partial class add_skill
+    public partial class matching_requests
     {
 
         /// <summary>
-        /// Label1 control.
+        /// btnapp control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.Button btnapp;
 
         /// <summary>
-        /// txtsnm control.
+        /// btnrej control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtsnm;
+        protected global::System.Web.UI.WebControls.Button btnrej;
 
         /// <summary>
-        /// Label5 control.
+        /// btnass control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label5;
+        protected global::System.Web.UI.WebControls.Button btnass;
 
         /// <summary>
-        /// drpcat control.
+        /// btnreje control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList drpcat;
+        protected global::System.Web.UI.WebControls.Button btnreje;
 
         /// <summary>
-        /// lbtnaddsk control.
+        /// btnview control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lbtnaddsk;
+        protected global::System.Web.UI.WebControls.Button btnview;
     }
 }

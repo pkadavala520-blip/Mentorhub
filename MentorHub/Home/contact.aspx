@@ -29,30 +29,30 @@
                 </div>
                 <div class="col-lg-7">
                     <div class="glass-card p-4 p-lg-5">
-                        <form id="contactForm">
+                        <div id="contactForm">
                             <div class="row g-3">
                                 <div class="col-md-6">
-                                    <label class="form-label">Full name</label>
-                                    <input type="text" class="form-control" placeholder="Enter your full name" required />
+                                    <asp:Label ID="Label1" runat="server"  class="form-label" Text="Full Name"></asp:Label>
+                                    <asp:TextBox ID="txtfnm" runat="server" class="form-control" placeholder="Enter your full name"></asp:TextBox>
                                 </div>
                                 <div class="col-md-6">
-                                    <label class="form-label">Email</label>
-                                    <input type="email" class="form-control" placeholder="Enter your email address" required />
+                                    <asp:Label ID="Label2" runat="server" class="form-label" Text="Email"></asp:Label>
+                                    <asp:TextBox ID="txtem" runat="server" class="form-control" placeholder="Enter your email address"></asp:TextBox>
                                 </div>
                                 <div class="col-12">
-                                    <label class="form-label">Subject</label>
-                                    <input type="text" class="form-control" placeholder="What would you like to discuss?" required />
+                                    <asp:Label ID="Label3" runat="server" Text="Subject" class="form-label"></asp:Label>
+                                    <asp:TextBox ID="txtsub" runat="server" class="form-control" placeholder="What would you like to discuss?"></asp:TextBox>
                                 </div>
                                 <div class="col-12">
-                                    <label class="form-label">Message</label>
-                                    <textarea rows="5" class="form-control" placeholder="Write your message here..." required></textarea>
+                                    <asp:Label ID="Label4" runat="server" Text="Message" class="form-label"></asp:Label>  
+                                    <asp:TextBox ID="txtmsg" runat="server" TextMode="MultiLine" Rows="5" class="form-control" placeholder="Write your message here..."></asp:TextBox>
                                 </div>
                                 <div class="col-12">
-                                    <button type="submit" class="btn gradient-btn">Send enquiry</button>
+                                    <asp:Button ID="btnsqui" runat="server" class="btn gradient-btn" Text="Send enquiry" />
                                     <div id="formMessage" class="small text-success mt-2" style="display: none;">Thanks! Your enquiry has been received.</div>
                                 </div>
                             </div>
-                        </form>
+                        </div>
                     </div>
                 </div>
             </div>

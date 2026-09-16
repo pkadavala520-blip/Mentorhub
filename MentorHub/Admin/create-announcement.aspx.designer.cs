@@ -11,7 +11,7 @@ namespace MentorHub.Admin
 {
 
 
-    public partial class add_skill
+    public partial class create_announcement
     {
 
         /// <summary>
@@ -24,13 +24,31 @@ namespace MentorHub.Admin
         protected global::System.Web.UI.WebControls.Label Label1;
 
         /// <summary>
-        /// txtsnm control.
+        /// txttle control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtsnm;
+        protected global::System.Web.UI.WebControls.TextBox txttle;
+
+        /// <summary>
+        /// Label2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label2;
+
+        /// <summary>
+        /// txtmsg control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtmsg;
 
         /// <summary>
         /// Label5 control.
@@ -42,21 +60,21 @@ namespace MentorHub.Admin
         protected global::System.Web.UI.WebControls.Label Label5;
 
         /// <summary>
-        /// drpcat control.
+        /// drpaud control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList drpcat;
+        protected global::System.Web.UI.WebControls.DropDownList drpaud;
 
         /// <summary>
-        /// lbtnaddsk control.
+        /// lbtnaddpn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lbtnaddsk;
+        protected global::System.Web.UI.WebControls.LinkButton lbtnaddpn;
     }
 }

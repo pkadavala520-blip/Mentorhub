@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MentorHub.Home
+namespace MentorHub.Admin
 {
 
 
-    public partial class faq
+    public partial class profile
     {
     }
 }

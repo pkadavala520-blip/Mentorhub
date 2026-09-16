@@ -5,7 +5,7 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
     <section class="hero-section">
         <div class="container py-5">
-            <div class="glass-card p-5">
+            <div class="glass-card p-5"> 
                 <span class="page-badge"><i class="bi bi-signpost-split"></i>How it Works</span>
                 <h1 class="fw-bold mb-3 mt-3">From sign-up to your first breakthrough session.</h1>
                 <p class="text-muted mb-0">Create an account, fill your profile, discover mentors, request sessions, and start your growth journey through guided support — all tracked in one dashboard.</p>

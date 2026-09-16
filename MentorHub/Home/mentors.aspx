@@ -11,7 +11,7 @@
                 <p class="text-muted mt-2 mb-0">From product growth to machine learning, these mentors bring practical experience and real-world insight.</p>
             </div>
 
-            <div class="d-flex flex-wrap gap-2 mb-4">
+            <div class="d-flex flex-wrap gap-2 mb-4"> 
                 <span class="filter-pill active" data-filter="all" role="button" tabindex="0"><i class="bi bi-funnel me-1"></i>All Domains</span>
                 <span class="filter-pill" data-filter="product-design" role="button" tabindex="0">Product Design</span>
                 <span class="filter-pill" data-filter="software-engineering" role="button" tabindex="0">Software Engineering</span>

@@ -11,7 +11,7 @@ namespace MentorHub.Admin
 {
 
 
-    public partial class add_skill
+    public partial class mentee_details
     {
 
         /// <summary>
@@ -24,13 +24,49 @@ namespace MentorHub.Admin
         protected global::System.Web.UI.WebControls.Label Label1;
 
         /// <summary>
-        /// txtsnm control.
+        /// txtfnm control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtsnm;
+        protected global::System.Web.UI.WebControls.TextBox txtfnm;
+
+        /// <summary>
+        /// Label3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label3;
+
+        /// <summary>
+        /// txtedu control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtedu;
+
+        /// <summary>
+        /// Label4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label4;
+
+        /// <summary>
+        /// txtint control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtint;
 
         /// <summary>
         /// Label5 control.
@@ -42,21 +78,21 @@ namespace MentorHub.Admin
         protected global::System.Web.UI.WebControls.Label Label5;
 
         /// <summary>
-        /// drpcat control.
+        /// drpstu control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList drpcat;
+        protected global::System.Web.UI.WebControls.DropDownList drpstu;
 
         /// <summary>
-        /// lbtnaddsk control.
+        /// Button1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lbtnaddsk;
+        protected global::System.Web.UI.WebControls.Button Button1;
     }
 }

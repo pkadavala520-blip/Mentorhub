@@ -71,7 +71,22 @@
     <Content Include="Admin\add-mentee.aspx" />
     <Content Include="Admin\add-mentor.aspx" />
     <Content Include="Admin\add-skill.aspx" />
+    <Content Include="Admin\announcements.aspx" />
+    <Content Include="Admin\categories.aspx" />
+    <Content Include="Admin\create-announcement.aspx" />
+    <Content Include="Admin\edit-profile.aspx" />
+    <Content Include="Admin\feedback.aspx" />
     <Content Include="Admin\index.aspx" />
+    <Content Include="Admin\manage-mentees.aspx" />
+    <Content Include="Admin\manage-mentors.aspx" />
+    <Content Include="Admin\matching-requests.aspx" />
+    <Content Include="Admin\mentee-details.aspx" />
+    <Content Include="Admin\mentor-details.aspx" />
+    <Content Include="Admin\profile.aspx" />
+    <Content Include="Admin\reports.aspx" />
+    <Content Include="Admin\sessions.aspx" />
+    <Content Include="Admin\settings.aspx" />
+    <Content Include="Admin\skills.aspx" />
     <Content Include="App_Data\Mentorehubdb.mdf" />
     <Content Include="App_Data\Mentorehubdb_log.ldf">
       <DependentUpon>Mentorehubdb.mdf</DependentUpon>
@@ -94,6 +109,7 @@
     <Content Include="Home\mentors.aspx" />
     <Content Include="Home\SignIn_up.aspx" />
     <Content Include="Home\success-stories.aspx" />
+    <Content Include="Index.aspx" />
     <Content Include="Mentee\edit-profile.aspx" />
     <Content Include="Mentee\feedback.aspx" />
     <Content Include="Mentee\find-mentor.aspx" />
@@ -161,12 +177,117 @@
     <Compile Include="Admin\Admin.Master.designer.cs">
       <DependentUpon>Admin.Master</DependentUpon>
     </Compile>
+    <Compile Include="Admin\announcements.aspx.cs">
+      <DependentUpon>announcements.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\announcements.aspx.designer.cs">
+      <DependentUpon>announcements.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\categories.aspx.cs">
+      <DependentUpon>categories.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\categories.aspx.designer.cs">
+      <DependentUpon>categories.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\create-announcement.aspx.cs">
+      <DependentUpon>create-announcement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\create-announcement.aspx.designer.cs">
+      <DependentUpon>create-announcement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\edit-profile.aspx.cs">
+      <DependentUpon>edit-profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\edit-profile.aspx.designer.cs">
+      <DependentUpon>edit-profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\feedback.aspx.cs">
+      <DependentUpon>feedback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\feedback.aspx.designer.cs">
+      <DependentUpon>feedback.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Admin\index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\manage-mentees.aspx.cs">
+      <DependentUpon>manage-mentees.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\manage-mentees.aspx.designer.cs">
+      <DependentUpon>manage-mentees.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\manage-mentors.aspx.cs">
+      <DependentUpon>manage-mentors.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\manage-mentors.aspx.designer.cs">
+      <DependentUpon>manage-mentors.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\matching-requests.aspx.cs">
+      <DependentUpon>matching-requests.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\matching-requests.aspx.designer.cs">
+      <DependentUpon>matching-requests.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\mentee-details.aspx.cs">
+      <DependentUpon>mentee-details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\mentee-details.aspx.designer.cs">
+      <DependentUpon>mentee-details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\mentor-details.aspx.cs">
+      <DependentUpon>mentor-details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\mentor-details.aspx.designer.cs">
+      <DependentUpon>mentor-details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\profile.aspx.cs">
+      <DependentUpon>profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\profile.aspx.designer.cs">
+      <DependentUpon>profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\reports.aspx.cs">
+      <DependentUpon>reports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\reports.aspx.designer.cs">
+      <DependentUpon>reports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\sessions.aspx.cs">
+      <DependentUpon>sessions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\sessions.aspx.designer.cs">
+      <DependentUpon>sessions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\settings.aspx.cs">
+      <DependentUpon>settings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\settings.aspx.designer.cs">
+      <DependentUpon>settings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\skills.aspx.cs">
+      <DependentUpon>skills.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\skills.aspx.designer.cs">
+      <DependentUpon>skills.aspx</DependentUpon>
     </Compile>
     <Compile Include="Home\about.aspx.cs">
       <DependentUpon>about.aspx</DependentUpon>
@@ -244,6 +365,13 @@
     </Compile>
     <Compile Include="Home\success-stories.aspx.designer.cs">
       <DependentUpon>success-stories.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
     </Compile>
     <Compile Include="Mentee\edit-profile.aspx.cs">
       <DependentUpon>edit-profile.aspx</DependentUpon>

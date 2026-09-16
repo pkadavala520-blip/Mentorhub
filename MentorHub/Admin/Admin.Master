@@ -22,19 +22,19 @@
                     <aside class="sidebar p-3">
                         <h4 class="fw-bold mb-4"><i class="bi bi-shield-lock me-2"></i>Admin Panel</h4>
                         <nav class="nav flex-column">
-                            <a class="nav-link active" href="index.html"><i class="bi bi-speedometer2 me-2"></i>Dashboard</a>
-                            <a class="nav-link" href="manage-mentors.html"><i class="bi bi-people me-2"></i>Manage Mentors</a>
-                            <a class="nav-link" href="manage-mentees.html"><i class="bi bi-person-workspace me-2"></i>Manage Mentees</a>
-                            <a class="nav-link" href="matching-requests.html"><i class="bi bi-ui-checks me-2"></i>Matching Requests</a>
-                            <a class="nav-link" href="sessions.html"><i class="bi bi-calendar2-week me-2"></i>Sessions</a>
-                            <a class="nav-link" href="reports.html"><i class="bi bi-bar-chart me-2"></i>Reports</a>
-                            <a class="nav-link" href="feedback.html"><i class="bi bi-chat-left-text me-2"></i>Feedback</a>
-                            <a class="nav-link" href="categories.html"><i class="bi bi-tags me-2"></i>Categories</a>
-                            <a class="nav-link" href="skills.html"><i class="bi bi-lightbulb me-2"></i>Skills</a>
-                            <a class="nav-link" href="announcements.html"><i class="bi bi-megaphone me-2"></i>Announcements</a>
-                            <a class="nav-link" href="settings.html"><i class="bi bi-gear me-2"></i>Settings</a>
-                            <a class="nav-link" href="profile.html"><i class="bi bi-person me-2"></i>Profile</a>
-                            <a class="nav-link" href="../Home/login.html"><i class="bi bi-box-arrow-right me-2"></i>Logout</a>
+                            <a class="nav-link active" href="index.aspx"><i class="bi bi-speedometer2 me-2"></i>Dashboard</a>
+                            <a class="nav-link" href="manage-mentors.aspx"><i class="bi bi-people me-2"></i>Manage Mentors</a>
+                            <a class="nav-link" href="manage-mentees.aspx"><i class="bi bi-person-workspace me-2"></i>Manage Mentees</a>
+                            <a class="nav-link" href="matching-requests.aspx"><i class="bi bi-ui-checks me-2"></i>Matching Requests</a>
+                            <a class="nav-link" href="sessions.aspx"><i class="bi bi-calendar2-week me-2"></i>Sessions</a>
+                            <a class="nav-link" href="reports.aspx"><i class="bi bi-bar-chart me-2"></i>Reports</a>
+                            <a class="nav-link" href="feedback.aspx"><i class="bi bi-chat-left-text me-2"></i>Feedback</a>
+                            <a class="nav-link" href="categories.aspx"><i class="bi bi-tags me-2"></i>Categories</a>
+                            <a class="nav-link" href="skills.aspx"><i class="bi bi-lightbulb me-2"></i>Skills</a>
+                            <a class="nav-link" href="announcements.aspx"><i class="bi bi-megaphone me-2"></i>Announcements</a>
+                            <a class="nav-link" href="settings.aspx"><i class="bi bi-gear me-2"></i>Settings</a>
+                            <a class="nav-link" href="profile.aspx"><i class="bi bi-person me-2"></i>Profile</a>
+                            <a class="nav-link" href="../Home/SignIn_up.aspx"><i class="bi bi-box-arrow-right me-2"></i>Logout</a>
                         </nav>
                     </aside>
             </asp:ContentPlaceHolder>
@@ -142,7 +142,7 @@
                     <div class="dashboard-card p-4">
                         <div class="d-flex justify-content-between align-items-center mb-3">
                             <h5 class="fw-semibold mb-0">Recent Matching Requests</h5>
-                            <a href="matching-requests.html" class="btn btn-sm gradient-btn">View All</a>
+                            <a href="matching-requests.aspx" class="btn btn-sm gradient-btn">View All</a>
                         </div>
                         <div class="table-responsive">
                             <table class="table align-middle">

@@ -11,7 +11,7 @@ namespace MentorHub.Admin
 {
 
 
-    public partial class add_mentee
+    public partial class mentor_details
     {
 
         /// <summary>
@@ -24,31 +24,13 @@ namespace MentorHub.Admin
         protected global::System.Web.UI.WebControls.Label Label1;
 
         /// <summary>
-        /// txtfnm control.
+        /// txtmfnm control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtfnm;
-
-        /// <summary>
-        /// Label2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label2;
-
-        /// <summary>
-        /// txtem control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtem;
+        protected global::System.Web.UI.WebControls.TextBox txtmfnm;
 
         /// <summary>
         /// Label3 control.
@@ -60,13 +42,13 @@ namespace MentorHub.Admin
         protected global::System.Web.UI.WebControls.Label Label3;
 
         /// <summary>
-        /// txtedu control.
+        /// txtmdmn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtedu;
+        protected global::System.Web.UI.WebControls.TextBox txtmdmn;
 
         /// <summary>
         /// Label4 control.
@@ -78,39 +60,39 @@ namespace MentorHub.Admin
         protected global::System.Web.UI.WebControls.Label Label4;
 
         /// <summary>
-        /// txtint control.
+        /// txtmsk control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtint;
+        protected global::System.Web.UI.WebControls.TextBox txtmsk;
 
         /// <summary>
-        /// Label5 control.
+        /// Label6 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label5;
+        protected global::System.Web.UI.WebControls.Label Label6;
 
         /// <summary>
-        /// drpstu control.
+        /// drpmstu control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList drpstu;
+        protected global::System.Web.UI.WebControls.DropDownList drpmstu;
 
         /// <summary>
-        /// lbtnaddMentee control.
+        /// btnscng control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lbtnaddMentee;
+        protected global::System.Web.UI.WebControls.Button btnscng;
     }
 }
