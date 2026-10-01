@@ -245,10 +245,42 @@
                             or mentor matching assistance.
                         </p>
 
-                        <a href="contact.aspx" class="btn gradient-btn">
+                        <a href="contact.aspx" class="btn gradient-btn w-100">
                             Get in touch
                         </a>
 
+                        <hr class="my-4" />
+
+                        <ul class="list-unstyled mb-0 faq-support-list">
+                            <li class="d-flex align-items-start gap-3">
+                                <i class="bi bi-envelope-paper"></i>
+                                <div>
+                                    <strong>Email support</strong>
+                                    <small class="d-block text-muted">Replies within one business day</small>
+                                </div>
+                            </li>
+                            <li class="d-flex align-items-start gap-3">
+                                <i class="bi bi-chat-left-text"></i>
+                                <div>
+                                    <strong>Live chat</strong>
+                                    <small class="d-block text-muted">Mon&ndash;Fri, 9am to 6pm</small>
+                                </div>
+                            </li>
+                            <li class="d-flex align-items-start gap-3">
+                                <i class="bi bi-book"></i>
+                                <div>
+                                    <strong>Help center</strong>
+                                    <small class="d-block text-muted">Guides for mentors and mentees</small>
+                                </div>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                    <div class="dashboard-card p-4 mt-4 text-center faq-stat-card">
+                        <i class="bi bi-people fs-3"></i>
+                        <h4 class="fw-bold mb-0 mt-2">96%</h4>
+                        <small class="text-muted">of questions answered in the FAQ, no ticket needed</small>
                     </div>
 
                 </div>

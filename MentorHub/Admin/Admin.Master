@@ -48,7 +48,7 @@
                         </div>
                         <div class="d-flex align-items-center gap-3">
                             <i class="bi bi-bell fs-5"></i>
-                            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><rect width='200' height='200' fill='%23eef0f3'/><circle cx='100' cy='78' r='38' fill='%23a9b4c2'/><path d='M28 192 C28 128 172 128 172 192 Z' fill='%23a9b4c2'/></svg>" class="profile-avatar profile-photo profile-photo-empty" data-photo-key="adminProfilePhoto" alt="Profile" />
+                            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%235535e6'/><stop offset='1' stop-color='%23a855f7'/></linearGradient></defs><rect width='200' height='200' fill='url(%23g)'/><circle cx='100' cy='78' r='34' fill='white' fill-opacity='0.92'/><path d='M38 188 C38 128 162 128 162 188 Z' fill='white' fill-opacity='0.92'/></svg>" class="profile-avatar profile-photo profile-photo-empty" data-photo-key="adminProfilePhoto" alt="Profile" />
                         </div>
                     </div>
 
@@ -180,6 +180,122 @@
                                 </tbody>
                             </table>
                         </div>
+                    </div>
+
+                    <div class="row g-4 mt-1">
+                        <div class="col-lg-7">
+                            <div class="dashboard-card p-4">
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <h5 class="fw-semibold mb-0">Top Performing Mentors</h5>
+                                    <a href="manage-mentors.aspx" class="small text-decoration-none">View All</a>
+                                </div>
+                                <ul class="list-unstyled mb-0 leaderboard-list">
+                                    <li class="d-flex align-items-center justify-content-between py-2">
+                                        <div class="d-flex align-items-center gap-3">
+                                            <span class="rank-badge">1</span>
+                                            <div>
+                                                <p class="fw-semibold mb-0">Meera Singh</p>
+                                                <small class="text-muted">Business Strategy</small>
+                                            </div>
+                                        </div>
+                                        <div class="text-end">
+                                            <span class="badge bg-success">5.0 <i class="bi bi-star-fill ms-1"></i></span>
+                                            <div><small class="text-muted">38 mentees</small></div>
+                                        </div>
+                                    </li>
+                                    <li class="d-flex align-items-center justify-content-between py-2">
+                                        <div class="d-flex align-items-center gap-3">
+                                            <span class="rank-badge">2</span>
+                                            <div>
+                                                <p class="fw-semibold mb-0">Aisha Patel</p>
+                                                <small class="text-muted">Product Design</small>
+                                            </div>
+                                        </div>
+                                        <div class="text-end">
+                                            <span class="badge bg-primary">4.9 <i class="bi bi-star-fill ms-1"></i></span>
+                                            <div><small class="text-muted">34 mentees</small></div>
+                                        </div>
+                                    </li>
+                                    <li class="d-flex align-items-center justify-content-between py-2">
+                                        <div class="d-flex align-items-center gap-3">
+                                            <span class="rank-badge">3</span>
+                                            <div>
+                                                <p class="fw-semibold mb-0">Daniel Ross</p>
+                                                <small class="text-muted">Software Engineering</small>
+                                            </div>
+                                        </div>
+                                        <div class="text-end">
+                                            <span class="badge bg-primary">4.8 <i class="bi bi-star-fill ms-1"></i></span>
+                                            <div><small class="text-muted">29 mentees</small></div>
+                                        </div>
+                                    </li>
+                                    <li class="d-flex align-items-center justify-content-between py-2">
+                                        <div class="d-flex align-items-center gap-3">
+                                            <span class="rank-badge">4</span>
+                                            <div>
+                                                <p class="fw-semibold mb-0">Rohan Mehta</p>
+                                                <small class="text-muted">Entrepreneurship</small>
+                                            </div>
+                                        </div>
+                                        <div class="text-end">
+                                            <span class="badge bg-primary">4.7 <i class="bi bi-star-fill ms-1"></i></span>
+                                            <div><small class="text-muted">21 mentees</small></div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="dashboard-card p-4 h-100">
+                                <h5 class="fw-semibold mb-3">Quick Actions</h5>
+                                <div class="d-grid gap-2 quick-action-grid">
+                                    <a href="add-mentor.aspx" class="btn btn-outline-primary text-start"><i class="bi bi-person-plus me-2"></i>Add New Mentor</a>
+                                    <a href="add-mentee.aspx" class="btn btn-outline-primary text-start"><i class="bi bi-person-add me-2"></i>Add New Mentee</a>
+                                    <a href="matching-requests.aspx" class="btn btn-outline-primary text-start"><i class="bi bi-diagram-3 me-2"></i>Review Matching Requests</a>
+                                    <a href="create-announcement.aspx" class="btn btn-outline-primary text-start"><i class="bi bi-megaphone me-2"></i>Post an Announcement</a>
+                                    <a href="reports.aspx" class="btn btn-outline-primary text-start"><i class="bi bi-file-earmark-bar-graph me-2"></i>Generate Report</a>
+                                </div>
+                                <hr class="my-3" />
+                                <div class="d-flex align-items-start gap-2 system-note">
+                                    <i class="bi bi-info-circle mt-1"></i>
+                                    <small class="text-muted mb-0">All systems are running normally. Last data sync completed a few minutes ago.</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-card p-4 mt-4">
+                        <h5 class="fw-semibold mb-3">Recent Activity</h5>
+                        <ul class="list-unstyled mb-0 activity-feed">
+                            <li class="d-flex gap-3">
+                                <span class="activity-dot bg-primary"></span>
+                                <div>
+                                    <p class="mb-0">New mentor <strong>Sneha Kapoor</strong> was approved and is now live.</p>
+                                    <small class="text-muted">12 min ago</small>
+                                </div>
+                            </li>
+                            <li class="d-flex gap-3">
+                                <span class="activity-dot bg-success"></span>
+                                <div>
+                                    <p class="mb-0">Matching request <strong>#M103</strong> between Rohan Verma and Meera Singh was approved.</p>
+                                    <small class="text-muted">1 hour ago</small>
+                                </div>
+                            </li>
+                            <li class="d-flex gap-3">
+                                <span class="activity-dot bg-warning"></span>
+                                <div>
+                                    <p class="mb-0">3 new matching requests are waiting for review.</p>
+                                    <small class="text-muted">3 hours ago</small>
+                                </div>
+                            </li>
+                            <li class="d-flex gap-3">
+                                <span class="activity-dot bg-info"></span>
+                                <div>
+                                    <p class="mb-0">Monthly platform report for June was generated.</p>
+                                    <small class="text-muted">Yesterday</small>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                 </main>
         </div>

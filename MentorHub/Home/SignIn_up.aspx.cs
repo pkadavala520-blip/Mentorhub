@@ -297,6 +297,7 @@ namespace MentorHub.Home
                 i = Convert.ToInt16(cmd.ExecuteScalar());
                 if (i>0)
                 {
+                    Session["AdminsEmail"] = txtLoginEmail.Text;
                     Response.Redirect("~/Admin/index.aspx");
                 }
                 else
@@ -322,13 +323,30 @@ namespace MentorHub.Home
                 }
                 else
                 {
-                    Response.Redirect("Invaild Email and Password");
+                    lblLoginMessage.Text = "Invalid Email or Password";
                 }
             }
         }
 
         protected void btnMenteeLogin_Click(object sender, EventArgs e)
         {
+            if ((!string.IsNullOrEmpty(txtLoginEmail.Text)) && !(string.IsNullOrEmpty(txtLoginPassword.Text)))
+            {
+                getcon();
+                cmd = new SqlCommand("SELECT count(*) FROM Mentee where Email='" + txtLoginEmail.Text + "' and Password='" + txtLoginPassword.Text + "' ", con);
+                cmd.ExecuteNonQuery();
+                i = Convert.ToInt16(cmd.ExecuteScalar());
+
+                if (i > 0)
+                {
+                    Session["MenteeEmail"] = txtLoginEmail.Text;
+                    Response.Redirect("~/Mentee/Index.aspx");
+                }
+                else
+                {
+                    lblLoginMessage.Text = "Invalid Email or Password";
+                }
+            }
         }
     }
 }

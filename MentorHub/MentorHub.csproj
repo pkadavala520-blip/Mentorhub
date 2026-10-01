@@ -589,7 +589,6 @@
     <Content Include="Admin\Admin.Master" />
     <Content Include="assets\vendor\bootstrap-icons\font\fonts\bootstrap-icons.woff" />
     <Content Include="assets\vendor\bootstrap-icons\font\fonts\bootstrap-icons.woff2" />
-    <Content Include="Mentor\Mentor.Master" />
     <Content Include="Mentee\Mentee.Master" />
     <Content Include="Home\Home.Master" />
     <None Include="packages.config" />

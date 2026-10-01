@@ -145,8 +145,22 @@
                                 </div>
                             </div>
                             <div class="col-lg-5 fade-in">
-                                <div class="glass-card p-4">
+                                <div class="glass-card p-4 hero-image-frame">
                                     <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80" class="rounded-4 shadow" alt="Mentorship" />
+                                    <div class="hero-float-badge hero-float-badge-top">
+                                        <i class="bi bi-patch-check-fill"></i>
+                                        <div>
+                                            <strong>4.9/5</strong>
+                                            <small>Average mentor rating</small>
+                                        </div>
+                                    </div>
+                                    <div class="hero-float-badge hero-float-badge-bottom">
+                                        <i class="bi bi-broadcast"></i>
+                                        <div>
+                                            <strong>Live now</strong>
+                                            <small>312 sessions in progress</small>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

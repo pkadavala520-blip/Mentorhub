@@ -6,7 +6,7 @@
     <main class="flex-grow-1 content-area p-4">
         <div class="topbar rounded-4 p-3 mb-4 d-flex justify-content-between align-items-center">
           <div><button class="btn btn-outline-secondary me-3 sidebar-toggle-btn" data-sidebar-toggle aria-label="Toggle navigation menu" aria-expanded="false"><i class="bi bi-list"></i></button><span class="fw-semibold">Edit Profile</span></div>
-          <a href="profile.html" class="btn btn-outline-secondary"><i class="bi bi-arrow-left me-2"></i>Back</a>
+          <a href="profile.aspx" class="btn btn-outline-secondary"><i class="bi bi-arrow-left me-2"></i>Back</a>
         </div>
         <div class="dashboard-card p-4" style="max-width:640px;">
           <h5 class="fw-semibold mb-3">Update Your Details</h5>
