@@ -10,6 +10,7 @@
         </div>
         <div class="dashboard-card p-4" style="max-width:640px;">
           <h5 class="fw-semibold mb-3">Update Your Details</h5>
+
           <form class="row g-3" onsubmit="return false;">
             <div class="col-md-6"><label class="form-label">Full Name</label><input class="form-control" placeholder="Your full name" /></div>
             <div class="col-md-6"><label class="form-label">Email</label><input type="email" class="form-control" placeholder="you@studentmail.com" /></div>
@@ -18,6 +19,7 @@
             <div class="col-12"><label class="form-label">Career Goals</label><textarea class="form-control" rows="3" placeholder="Share what you're working towards"></textarea></div>
             <div class="col-12"><button class="btn gradient-btn">Save Changes</button></div>
           </form>
+
         </div>
       </main>
 </asp:Content>

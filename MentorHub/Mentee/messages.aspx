@@ -15,6 +15,7 @@
             <div class="dashboard-card p-3 chat-list">
               <div class="border-bottom pb-2 mb-3">
                 <h6 class="fw-semibold mb-0">Conversations</h6>
+
               </div>
               <div class="d-flex align-items-center p-2 rounded-3 bg-light mb-2">
                 <div class="me-2"><i class="bi bi-circle-fill text-success"></i></div>

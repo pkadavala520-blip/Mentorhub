@@ -163,6 +163,7 @@ namespace MentorHub.Home
             {
                 getcon();
                 menteeimgupload();
+                   
 
                 cmd = new SqlCommand("insert into Mentee(FullName,Email,Password,Phone,Education,College,CareerGoal,LearningGoal,SkillsInterests,PreferredDomain,Bio,ProfilePhoto,TermsAccepted) " +
                     "values('"+ txtMenteeFullName.Text+ "','"+ txtMenteeEmail.Text+"','"+ txtMenteePassword.Text+ "','"+ txtMenteePhone.Text+ "','"+ ddlEducation.SelectedValue + "','"+ txtCollege .Text + "','"+ ddlCareerGoal.SelectedValue+ "','"+ txtLearningGoal.Text + "','"+ txtSkillsInterests.Text+ "','"+ ddlPreferredDomain.SelectedValue+ "','"+ txtMenteeBio.Text+ "','" + fnm + "','" + (chkMenteeTerms.Checked ? "1":"0")+"')", con);
