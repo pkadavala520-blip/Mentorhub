@@ -1,0 +1,629 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E7C5ABF1-459F-4287-95B6-07BFD8AD11FA}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MentorHub</RootNamespace>
+    <AssemblyName>MentorHub</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44344</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DataVisualization" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\add-category.aspx" />
+    <Content Include="Admin\add-skill.aspx" />
+    <Content Include="Admin\announcements.aspx" />
+    <Content Include="Admin\categories.aspx" />
+    <Content Include="Admin\create-announcement.aspx" />
+    <Content Include="Admin\edit-profile.aspx" />
+    <Content Include="Admin\feedback.aspx" />
+    <Content Include="Admin\index.aspx" />
+    <Content Include="Admin\manage-mentees.aspx" />
+    <Content Include="Admin\manage-mentors.aspx" />
+    <Content Include="Admin\matching-requests.aspx" />
+    <Content Include="Admin\mentee-details.aspx" />
+    <Content Include="Admin\mentor-details.aspx" />
+    <Content Include="Admin\profile.aspx" />
+    <Content Include="Admin\reports.aspx" />
+    <Content Include="Admin\sessions.aspx" />
+    <Content Include="Admin\settings.aspx" />
+    <Content Include="Admin\skills.aspx" />
+    <Content Include="App_Data\MentorhubDB.mdf" />
+    <Content Include="App_Data\MentorhubDB_log.ldf">
+      <DependentUpon>MentorhubDB.mdf</DependentUpon>
+    </Content>
+    <Content Include="assets\css\mentor-panel.css" />
+    <Content Include="assets\css\styles.css" />
+    <Content Include="assets\js\main.js" />
+    <Content Include="assets\js\mentor-app.js" />
+    <Content Include="assets\vendor\bootstrap-icons\font\bootstrap-icons.css" />
+    <Content Include="assets\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="assets\vendor\bootstrap\js\bootstrap.bundle.min.js" />
+    <Content Include="assets\vendor\chartjs\chart.umd.js" />
+    <Content Include="Home\about.aspx" />
+    <Content Include="Home\contact.aspx" />
+    <Content Include="Home\faq.aspx" />
+    <Content Include="Home\features.aspx" />
+    <Content Include="Home\forgot-password.aspx" />
+    <Content Include="Home\how-it-works.aspx" />
+    <Content Include="Home\index.aspx" />
+    <Content Include="Home\mentors.aspx" />
+    <Content Include="Home\SignIn_up.aspx" />
+    <Content Include="Home\success-stories.aspx" />
+    <Content Include="Index.aspx" />
+    <Content Include="Mentee\edit-profile.aspx" />
+    <Content Include="Mentee\feedback.aspx" />
+    <Content Include="Mentee\find-mentor.aspx" />
+    <Content Include="Mentee\goals.aspx" />
+    <Content Include="Mentee\Index.aspx" />
+    <Content Include="Mentee\learning-goals.aspx" />
+    <Content Include="Mentee\messages.aspx" />
+    <Content Include="Mentee\my-mentor.aspx" />
+    <Content Include="Mentee\notifications.aspx" />
+    <Content Include="Mentee\profile.aspx" />
+    <Content Include="Mentee\recommemded.aspx" />
+    <Content Include="Mentee\requests.aspx" />
+    <Content Include="Mentee\schedule.aspx" />
+    <Content Include="Mentee\settings.aspx" />
+    <Content Include="Mentor\add-slot.aspx" />
+    <Content Include="Mentor\availability.aspx" />
+    <Content Include="Mentor\edit-skills.aspx" />
+    <Content Include="Mentor\feedback.aspx" />
+    <Content Include="Mentor\Index.aspx" />
+    <Content Include="Mentor\mentee-profile.aspx" />
+    <Content Include="Mentor\mentees.aspx" />
+    <Content Include="Mentor\messages.aspx" />
+    <Content Include="Mentor\my-skills.aspx" />
+    <Content Include="Mentor\notifications.aspx" />
+    <Content Include="Mentor\profile.aspx" />
+    <Content Include="Mentor\requests.aspx" />
+    <Content Include="Mentor\schedule.aspx" />
+    <Content Include="Mentor\settings.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\add-category.aspx.cs">
+      <DependentUpon>add-category.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\add-category.aspx.designer.cs">
+      <DependentUpon>add-category.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\add-skill.aspx.cs">
+      <DependentUpon>add-skill.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\add-skill.aspx.designer.cs">
+      <DependentUpon>add-skill.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\announcements.aspx.cs">
+      <DependentUpon>announcements.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\announcements.aspx.designer.cs">
+      <DependentUpon>announcements.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\categories.aspx.cs">
+      <DependentUpon>categories.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\categories.aspx.designer.cs">
+      <DependentUpon>categories.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\create-announcement.aspx.cs">
+      <DependentUpon>create-announcement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\create-announcement.aspx.designer.cs">
+      <DependentUpon>create-announcement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\edit-profile.aspx.cs">
+      <DependentUpon>edit-profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\edit-profile.aspx.designer.cs">
+      <DependentUpon>edit-profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\feedback.aspx.cs">
+      <DependentUpon>feedback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\feedback.aspx.designer.cs">
+      <DependentUpon>feedback.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\manage-mentees.aspx.cs">
+      <DependentUpon>manage-mentees.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\manage-mentees.aspx.designer.cs">
+      <DependentUpon>manage-mentees.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\manage-mentors.aspx.cs">
+      <DependentUpon>manage-mentors.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\manage-mentors.aspx.designer.cs">
+      <DependentUpon>manage-mentors.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\matching-requests.aspx.cs">
+      <DependentUpon>matching-requests.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\matching-requests.aspx.designer.cs">
+      <DependentUpon>matching-requests.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\mentee-details.aspx.cs">
+      <DependentUpon>mentee-details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\mentee-details.aspx.designer.cs">
+      <DependentUpon>mentee-details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\mentor-details.aspx.cs">
+      <DependentUpon>mentor-details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\mentor-details.aspx.designer.cs">
+      <DependentUpon>mentor-details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\profile.aspx.cs">
+      <DependentUpon>profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\profile.aspx.designer.cs">
+      <DependentUpon>profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\reports.aspx.cs">
+      <DependentUpon>reports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\reports.aspx.designer.cs">
+      <DependentUpon>reports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\sessions.aspx.cs">
+      <DependentUpon>sessions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\sessions.aspx.designer.cs">
+      <DependentUpon>sessions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\settings.aspx.cs">
+      <DependentUpon>settings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\settings.aspx.designer.cs">
+      <DependentUpon>settings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\skills.aspx.cs">
+      <DependentUpon>skills.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\skills.aspx.designer.cs">
+      <DependentUpon>skills.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\about.aspx.cs">
+      <DependentUpon>about.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home\about.aspx.designer.cs">
+      <DependentUpon>about.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\contact.aspx.cs">
+      <DependentUpon>contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home\contact.aspx.designer.cs">
+      <DependentUpon>contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\faq.aspx.cs">
+      <DependentUpon>faq.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home\faq.aspx.designer.cs">
+      <DependentUpon>faq.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\features.aspx.cs">
+      <DependentUpon>features.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home\features.aspx.designer.cs">
+      <DependentUpon>features.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\forgot-password.aspx.cs">
+      <DependentUpon>forgot-password.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home\forgot-password.aspx.designer.cs">
+      <DependentUpon>forgot-password.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\Home.Master.cs">
+      <DependentUpon>Home.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home\Home.Master.designer.cs">
+      <DependentUpon>Home.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Home\how-it-works.aspx.cs">
+      <DependentUpon>how-it-works.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home\how-it-works.aspx.designer.cs">
+      <DependentUpon>how-it-works.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\mentors.aspx.cs">
+      <DependentUpon>mentors.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home\mentors.aspx.designer.cs">
+      <DependentUpon>mentors.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\SignIn_up.aspx.cs">
+      <DependentUpon>SignIn_up.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home\SignIn_up.aspx.designer.cs">
+      <DependentUpon>SignIn_up.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\success-stories.aspx.cs">
+      <DependentUpon>success-stories.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home\success-stories.aspx.designer.cs">
+      <DependentUpon>success-stories.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mentee\edit-profile.aspx.cs">
+      <DependentUpon>edit-profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mentee\edit-profile.aspx.designer.cs">
+      <DependentUpon>edit-profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mentee\feedback.aspx.cs">
+      <DependentUpon>feedback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mentee\feedback.aspx.designer.cs">
+      <DependentUpon>feedback.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mentee\find-mentor.aspx.cs">
+      <DependentUpon>find-mentor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mentee\find-mentor.aspx.designer.cs">
+      <DependentUpon>find-mentor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mentee\goals.aspx.cs">
+      <DependentUpon>goals.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mentee\goals.aspx.designer.cs">
+      <DependentUpon>goals.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mentee\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mentee\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mentee\learning-goals.aspx.cs">
+      <DependentUpon>learning-goals.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mentee\learning-goals.aspx.designer.cs">
+      <DependentUpon>learning-goals.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mentee\Mentee.Master.cs">
+      <DependentUpon>Mentee.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mentee\Mentee.Master.designer.cs">
+      <DependentUpon>Mentee.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Mentee\messages.aspx.cs">
+      <DependentUpon>messages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mentee\messages.aspx.designer.cs">
+      <DependentUpon>messages.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mentee\my-mentor.aspx.cs">
+      <DependentUpon>my-mentor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mentee\my-mentor.aspx.designer.cs">
+      <DependentUpon>my-mentor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mentee\notifications.aspx.cs">
+      <DependentUpon>notifications.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mentee\notifications.aspx.designer.cs">
+      <DependentUpon>notifications.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mentee\profile.aspx.cs">
+      <DependentUpon>profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mentee\profile.aspx.designer.cs">
+      <DependentUpon>profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mentee\recommemded.aspx.cs">
+      <DependentUpon>recommemded.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mentee\recommemded.aspx.designer.cs">
+      <DependentUpon>recommemded.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mentee\requests.aspx.cs">
+      <DependentUpon>requests.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mentee\requests.aspx.designer.cs">
+      <DependentUpon>requests.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mentee\schedule.aspx.cs">
+      <DependentUpon>schedule.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mentee\schedule.aspx.designer.cs">
+      <DependentUpon>schedule.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mentee\settings.aspx.cs">
+      <DependentUpon>settings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mentee\settings.aspx.designer.cs">
+      <DependentUpon>settings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mentor\add-slot.aspx.cs">
+      <DependentUpon>add-slot.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mentor\add-slot.aspx.designer.cs">
+      <DependentUpon>add-slot.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mentor\availability.aspx.cs">
+      <DependentUpon>availability.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mentor\availability.aspx.designer.cs">
+      <DependentUpon>availability.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mentor\edit-skills.aspx.cs">
+      <DependentUpon>edit-skills.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mentor\edit-skills.aspx.designer.cs">
+      <DependentUpon>edit-skills.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mentor\feedback.aspx.cs">
+      <DependentUpon>feedback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mentor\feedback.aspx.designer.cs">
+      <DependentUpon>feedback.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mentor\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mentor\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mentor\mentee-profile.aspx.cs">
+      <DependentUpon>mentee-profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mentor\mentee-profile.aspx.designer.cs">
+      <DependentUpon>mentee-profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mentor\mentees.aspx.cs">
+      <DependentUpon>mentees.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mentor\mentees.aspx.designer.cs">
+      <DependentUpon>mentees.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mentor\Mentor.Master.cs">
+      <DependentUpon>Mentor.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mentor\Mentor.Master.designer.cs">
+      <DependentUpon>Mentor.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Mentor\messages.aspx.cs">
+      <DependentUpon>messages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mentor\messages.aspx.designer.cs">
+      <DependentUpon>messages.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mentor\my-skills.aspx.cs">
+      <DependentUpon>my-skills.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mentor\my-skills.aspx.designer.cs">
+      <DependentUpon>my-skills.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mentor\notifications.aspx.cs">
+      <DependentUpon>notifications.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mentor\notifications.aspx.designer.cs">
+      <DependentUpon>notifications.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mentor\profile.aspx.cs">
+      <DependentUpon>profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mentor\profile.aspx.designer.cs">
+      <DependentUpon>profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mentor\requests.aspx.cs">
+      <DependentUpon>requests.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mentor\requests.aspx.designer.cs">
+      <DependentUpon>requests.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mentor\schedule.aspx.cs">
+      <DependentUpon>schedule.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mentor\schedule.aspx.designer.cs">
+      <DependentUpon>schedule.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mentor\settings.aspx.cs">
+      <DependentUpon>settings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mentor\settings.aspx.designer.cs">
+      <DependentUpon>settings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\Admin.Master" />
+    <Content Include="assets\vendor\bootstrap-icons\font\fonts\bootstrap-icons.woff" />
+    <Content Include="assets\vendor\bootstrap-icons\font\fonts\bootstrap-icons.woff2" />
+    <Content Include="Mentee\Mentee.Master" />
+    <Content Include="Home\Home.Master" />
+    <Content Include="Mentor\Mentor.Master" />
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ProfilePhotos\Mentee\" />
+    <Folder Include="ProfilePhotos\Mentor\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>59081</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44344/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

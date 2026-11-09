@@ -1,0 +1,817 @@
+﻿<%@ Master Language="C#"
+    AutoEventWireup="true"
+    CodeBehind="Mentee.master.cs"
+    Inherits="MentorHub.Mentee.Mentee" %>
+
+<!DOCTYPE html>
+
+<html>
+
+<head runat="server">
+
+    <meta charset="UTF-8" />
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0" />
+
+    <title>Mentee Dashboard | MentorHub</title>
+
+
+    <!-- Bootstrap -->
+    <link href="../assets/vendor/bootstrap/css/bootstrap.min.css"
+        rel="stylesheet" />
+
+
+    <!-- Bootstrap Icons -->
+    <link href="../assets/vendor/bootstrap-icons/font/bootstrap-icons.css"
+        rel="stylesheet" />
+
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+
+
+    <!-- Main CSS -->
+    <link rel="stylesheet"
+        href="../assets/css/styles.css?v=6" />
+
+
+    <!-- Page-specific HEAD content -->
+    <asp:ContentPlaceHolder
+        ID="head"
+        runat="server">
+    </asp:ContentPlaceHolder>
+
+</head>
+
+
+<body>
+
+    <form id="form1" runat="server">
+
+
+        <!-- ===================================================== -->
+        <!-- MAIN LAYOUT -->
+        <!-- ===================================================== -->
+
+        <div class="d-flex min-vh-100">
+
+
+            <!-- ================================================= -->
+            <!-- SIDEBAR -->
+            <!-- ================================================= -->
+
+            <aside class="sidebar p-3">
+
+
+                <!-- LOGO / TITLE -->
+
+                <div class="sidebar-brand mb-4">
+
+                    <h4 class="fw-bold mb-0">
+
+                        <i class="bi bi-person-hearts me-2"></i>
+
+                        Mentee Panel
+
+                    </h4>
+
+                </div>
+
+
+                <!-- NAVIGATION -->
+
+                <nav class="nav flex-column">
+
+
+                    <!-- DASHBOARD -->
+
+                    <a class="nav-link"
+                        href="index.aspx">
+
+                        <i class="bi bi-speedometer2 me-2"></i>
+
+                        Dashboard
+
+                    </a>
+
+
+                    <!-- PROFILE -->
+
+                    <a class="nav-link"
+                        href="profile.aspx">
+
+                        <i class="bi bi-person me-2"></i>
+
+                        Profile
+
+                    </a>
+
+
+                    <!-- FIND MENTOR -->
+
+                    <a class="nav-link"
+                        href="find-mentor.aspx">
+
+                        <i class="bi bi-search me-2"></i>
+
+                        Find Mentor
+
+                    </a>
+
+
+                    <!-- RECOMMENDED MENTORS -->
+
+                    <a class="nav-link"
+                        href="recommemded.aspx">
+
+                        <i class="bi bi-stars me-2"></i>
+
+                        Recommended Mentors
+
+                    </a>
+
+
+                    <!-- REQUESTS -->
+
+                    <a class="nav-link"
+                        href="requests.aspx">
+
+                        <i class="bi bi-envelope me-2"></i>
+
+                        My Requests
+
+                    </a>
+
+
+                    <!-- MESSAGES -->
+
+                    <a class="nav-link"
+                        href="messages.aspx">
+
+                        <i class="bi bi-chat-dots me-2"></i>
+
+                        Messages
+
+                    </a>
+
+
+                    <!-- SCHEDULE -->
+
+                    <a class="nav-link"
+                        href="schedule.aspx">
+
+                        <i class="bi bi-calendar2-event me-2"></i>
+
+                        Schedule
+
+                    </a>
+
+
+                    <!-- LEARNING GOALS -->
+
+                    <a class="nav-link"
+                        href="goals.aspx">
+
+                        <i class="bi bi-bullseye me-2"></i>
+
+                        Learning Goals
+
+                    </a>
+
+
+                    <!-- FEEDBACK -->
+
+                    <a class="nav-link"
+                        href="feedback.aspx">
+
+                        <i class="bi bi-star me-2"></i>
+
+                        Feedback
+
+                    </a>
+
+
+                    <!-- SETTINGS -->
+
+                    <a class="nav-link"
+                        href="settings.aspx">
+
+                        <i class="bi bi-gear me-2"></i>
+
+                        Settings
+
+                    </a>
+
+
+                    <!-- DIVIDER -->
+
+                    <hr class="my-3 opacity-25" />
+
+
+                    <!-- LOGOUT -->
+
+                    <a class="nav-link"
+                        href="../Home/SignIn_up.aspx">
+
+                        <i class="bi bi-box-arrow-right me-2"></i>
+
+                        Logout
+
+                    </a>
+
+
+                </nav>
+
+            </aside>
+
+
+            <!-- ================================================= -->
+            <!-- RIGHT SIDE -->
+            <!-- ================================================= -->
+
+            <div class="flex-grow-1">
+
+
+                <!-- ================================================= -->
+                <!-- PAGE CONTENT -->
+                <!-- ================================================= -->
+
+                <asp:ContentPlaceHolder
+                    ID="ContentPlaceHolder2"
+                    runat="server">
+                    <main class="content-area p-4">
+
+
+
+                        <div class="topbar rounded-4 p-3 mb-4 d-flex justify-content-between align-items-center">
+                            <div>
+                                <button class="btn btn-outline-secondary me-3 sidebar-toggle-btn" data-sidebar-toggle aria-label="Toggle navigation menu" aria-expanded="false"><i class="bi bi-list"></i></button>
+                                <span class="fw-semibold">Your learning journey</span>
+                            </div>
+
+                            <div class="d-flex align-items-center gap-3">
+                                <i class="bi bi-bell fs-5"></i>
+                                <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%237c3aed'/><stop offset='1' stop-color='%23d946ef'/></linearGradient></defs><rect width='200' height='200' fill='url(%23g)'/><circle cx='100' cy='78' r='34' fill='white' fill-opacity='0.92'/><path d='M38 188 C38 128 162 128 162 188 Z' fill='white' fill-opacity='0.92'/></svg>" class="profile-avatar profile-photo profile-photo-empty" data-photo-key="menteeProfilePhoto" alt="Profile" />
+                            </div>
+
+
+                        </div>
+                        <!-- ============================================ -->
+                        <!-- STAT CARDS -->
+                        <!-- ============================================ -->
+
+                        <div class="row g-4 mb-4">
+
+
+                            <div class="col-lg-4 col-md-6">
+
+                                <div class="dashboard-card p-4">
+
+                                    <p class="text-muted mb-1">
+                                        My Mentor
+                                    </p>
+
+                                    <h3 class="fw-bold mb-0">
+                                        <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
+                                    </h3>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="col-lg-4 col-md-6">
+
+                                <div class="dashboard-card p-4">
+
+                                    <p class="text-muted mb-1">
+                                        Pending Requests
+                                    </p>
+
+                                    <h3 class="fw-bold mb-0">2
+                                    </h3>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="col-lg-4 col-md-6">
+
+                                <div class="dashboard-card p-4">
+
+                                    <p class="text-muted mb-1">
+                                        Upcoming Sessions
+                                    </p>
+
+                                    <h3 class="fw-bold mb-0">4
+                                    </h3>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="col-lg-4 col-md-6">
+
+                                <div class="dashboard-card p-4">
+
+                                    <p class="text-muted mb-1">
+                                        Completed Sessions
+                                    </p>
+
+                                    <h3 class="fw-bold mb-0">18
+                                    </h3>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="col-lg-4 col-md-6">
+
+                                <div class="dashboard-card p-4">
+
+                                    <p class="text-muted mb-1">
+                                        Learning Progress
+                                    </p>
+
+                                    <h3 class="fw-bold mb-0">74%
+                                    </h3>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <!-- ============================================ -->
+                        <!-- LEARNING PATH -->
+                        <!-- ============================================ -->
+
+                        <div class="dashboard-card p-4">
+
+                            <h5 class="fw-semibold mb-3">Recommended Learning Path
+                            </h5>
+
+
+                            <div class="table-responsive">
+
+                                <table class="table align-middle">
+
+                                    <thead>
+
+                                        <tr>
+
+                                            <th>Goal</th>
+
+                                            <th>Progress</th>
+
+                                            <th>Status</th>
+
+                                        </tr>
+
+                                    </thead>
+
+
+                                    <tbody>
+
+
+                                        <tr>
+
+                                            <td>Career switch to Product Management
+                                            </td>
+
+                                            <td>
+
+                                                <div class="progress"
+                                                    style="height: 8px;">
+
+                                                    <div
+                                                        class="progress-bar"
+                                                        style="width: 70%;">
+                                                    </div>
+
+                                                </div>
+
+                                            </td>
+
+                                            <td>
+
+                                                <span class="badge bg-success">On Track
+                                                </span>
+
+                                            </td>
+
+                                        </tr>
+
+
+                                        <tr>
+
+                                            <td>System design prep for interviews
+                                            </td>
+
+                                            <td>
+
+                                                <div class="progress"
+                                                    style="height: 8px;">
+
+                                                    <div
+                                                        class="progress-bar"
+                                                        style="width: 55%;">
+                                                    </div>
+
+                                                </div>
+
+                                            </td>
+
+                                            <td>
+
+                                                <span class="badge bg-warning text-dark">In Progress
+                                                </span>
+
+                                            </td>
+
+                                        </tr>
+
+
+                                    </tbody>
+
+                                </table>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- ============================================ -->
+                        <!-- SUGGESTED MENTORS -->
+                        <!-- ============================================ -->
+
+                        <div class="row g-4 mt-1">
+
+
+                            <div class="col-lg-7">
+
+                                <div class="dashboard-card p-4">
+
+
+                                    <div class="d-flex
+                                justify-content-between
+                                align-items-center
+                                mb-3">
+
+                                        <h5 class="fw-semibold mb-0">Suggested Mentors for You
+
+                                        </h5>
+
+
+                                        <a href="recommemded.aspx"
+                                            class="small text-decoration-none">See All
+
+                                        </a>
+
+                                    </div>
+
+
+                                    <div class="row g-3">
+
+
+                                        <div class="col-md-4">
+
+                                            <div class="suggested-mentor
+                                        text-center
+                                        p-3">
+
+                                                <div class="mb-2">
+
+                                                    <i class="bi bi-person-circle"
+                                                        style="font-size: 55px;"></i>
+
+                                                </div>
+
+                                                <p class="fw-semibold mb-0">
+                                                    Meera Singh
+                                                </p>
+
+                                                <small class="text-muted d-block mb-2">Business Consultant
+                                                </small>
+
+                                                <a href="find-mentor.aspx"
+                                                    class="btn btn-sm btn-outline-primary w-100">Request
+
+                                                </a>
+
+                                            </div>
+
+                                        </div>
+
+
+                                        <div class="col-md-4">
+
+                                            <div class="suggested-mentor
+                                        text-center
+                                        p-3">
+
+                                                <div class="mb-2">
+
+                                                    <i class="bi bi-person-circle"
+                                                        style="font-size: 55px;"></i>
+
+                                                </div>
+
+                                                <p class="fw-semibold mb-0">
+                                                    Arjun Verma
+                                                </p>
+
+                                                <small class="text-muted d-block mb-2">Data Science Manager
+                                                </small>
+
+                                                <a href="find-mentor.aspx"
+                                                    class="btn btn-sm btn-outline-primary w-100">Request
+
+                                                </a>
+
+                                            </div>
+
+                                        </div>
+
+
+                                        <div class="col-md-4">
+
+                                            <div class="suggested-mentor
+                                        text-center
+                                        p-3">
+
+                                                <div class="mb-2">
+
+                                                    <i class="bi bi-person-circle"
+                                                        style="font-size: 55px;"></i>
+
+                                                </div>
+
+                                                <p class="fw-semibold mb-0">
+                                                    Rohan Mehta
+                                                </p>
+
+                                                <small class="text-muted d-block mb-2">Founder &amp; CTO
+                                                </small>
+
+                                                <a href="find-mentor.aspx"
+                                                    class="btn btn-sm btn-outline-primary w-100">Request
+
+                                                </a>
+
+                                            </div>
+
+                                        </div>
+
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <!-- ======================================== -->
+                            <!-- UPCOMING SESSIONS -->
+                            <!-- ======================================== -->
+
+                            <div class="col-lg-5">
+
+                                <div class="dashboard-card p-4 h-100">
+
+                                    <h5 class="fw-semibold mb-3">Upcoming Sessions
+                                    </h5>
+
+
+                                    <ul class="list-unstyled mb-0 session-list">
+
+
+                                        <li class="d-flex
+                                   align-items-center
+                                   gap-3 py-2">
+
+                                            <div class="session-date-chip">
+
+                                                <span>24</span>
+                                                Jul
+
+                                            </div>
+
+                                            <div>
+
+                                                <p class="fw-semibold mb-0">
+                                                    1:1 with Daniel Ross
+                                                </p>
+
+                                                <small class="text-muted">Interview prep · 5:00 PM
+                                                </small>
+
+                                            </div>
+
+                                        </li>
+
+
+                                        <li class="d-flex
+                                   align-items-center
+                                   gap-3 py-2">
+
+                                            <div class="session-date-chip">
+
+                                                <span>27</span>
+                                                Jul
+
+                                            </div>
+
+                                            <div>
+
+                                                <p class="fw-semibold mb-0">
+                                                    System design review
+                                                </p>
+
+                                                <small class="text-muted">With Daniel Ross · 6:30 PM
+                                                </small>
+
+                                            </div>
+
+                                        </li>
+
+
+                                        <li class="d-flex
+                                   align-items-center
+                                   gap-3 py-2">
+
+                                            <div class="session-date-chip">
+
+                                                <span>02</span>
+                                                Aug
+
+                                            </div>
+
+                                            <div>
+
+                                                <p class="fw-semibold mb-0">
+                                                    Portfolio walkthrough
+                                                </p>
+
+                                                <small class="text-muted">With Daniel Ross · 4:00 PM
+                                                </small>
+
+                                            </div>
+
+                                        </li>
+
+
+                                    </ul>
+
+
+                                    <a href="schedule.aspx"
+                                        class="btn gradient-btn w-100 mt-2">View Full Schedule
+
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <!-- ============================================ -->
+                        <!-- MILESTONES -->
+                        <!-- ============================================ -->
+
+                        <div class="dashboard-card p-4 mt-4">
+
+                            <h5 class="fw-semibold mb-3">Your Milestones
+                            </h5>
+
+
+                            <div class="row g-3">
+
+
+                                <div class="col-6 col-md-3">
+
+                                    <div class="milestone-chip
+                                text-center
+                                p-3">
+
+                                        <i class="bi bi-award"></i>
+
+                                        <p class="fw-semibold mb-0 mt-2">
+                                            First Session
+                                        </p>
+
+                                        <small class="text-muted">Completed
+                                        </small>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="col-6 col-md-3">
+
+                                    <div class="milestone-chip
+                                text-center
+                                p-3">
+
+                                        <i class="bi bi-graph-up-arrow"></i>
+
+                                        <p class="fw-semibold mb-0 mt-2">
+                                            5 Sessions Streak
+                                        </p>
+
+                                        <small class="text-muted">Completed
+                                        </small>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="col-6 col-md-3">
+
+                                    <div class="milestone-chip
+                                text-center
+                                p-3">
+
+                                        <i class="bi bi-bullseye"></i>
+
+                                        <p class="fw-semibold mb-0 mt-2">
+                                            First Goal Set
+                                        </p>
+
+                                        <small class="text-muted">Completed
+                                        </small>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="col-6 col-md-3">
+
+                                    <div class="milestone-chip
+                                text-center
+                                p-3 locked">
+
+                                        <i class="bi bi-trophy"></i>
+
+                                        <p class="fw-semibold mb-0 mt-2">
+                                            20 Sessions
+                                        </p>
+
+                                        <small class="text-muted">2 to go
+                                        </small>
+
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+
+                        </div>
+
+
+                    </main>
+
+
+
+                </asp:ContentPlaceHolder>
+
+
+            </div>
+
+
+        </div>
+
+
+    </form>
+
+
+    <!-- Bootstrap JS -->
+
+    <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+    <!-- Main JS -->
+
+    <script src="../assets/js/main.js?v=6"></script>
+
+
+</body>
+
+</html>

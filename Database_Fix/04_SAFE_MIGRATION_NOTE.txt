@@ -1,0 +1,11 @@
+If a SQL Server 2019 database is required, do not try to change the MDF version number.
+On SQL Server 2025, use SSMS:
+  Database -> Tasks -> Generate Scripts
+Choose:
+  Script all tables/views/stored procedures/etc. as required
+  Types of data to script = Schema and data
+Then execute the generated script on the SQL Server 2019 target.
+
+This is the supported approach when moving data from a newer SQL Server version to an
+older version. Verify all tables, constraints, identity values, indexes and data after
+migration.

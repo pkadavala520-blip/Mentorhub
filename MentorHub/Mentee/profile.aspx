@@ -1,0 +1,98 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Mentee/Mentee.Master" AutoEventWireup="true" CodeBehind="profile.aspx.cs" Inherits="MentorHub.Mentee.profile" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+
+<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
+
+    <main class="flex-grow-1 content-area p-4">
+
+        <div class="topbar rounded-4 p-3 mb-4 d-flex justify-content-between align-items-center">
+            <div>
+                <span class="fw-semibold">Student Profile</span>
+            </div>
+
+            <a href="edit-profile.aspx" class="btn gradient-btn">
+                <i class="bi bi-pencil me-2"></i>Edit Profile
+            </a>
+        </div>
+
+        <div class="page-header">
+            <span class="page-badge"><i class="bi bi-person-vcard"></i>My Profile</span>
+            <h2 class="fw-bold mt-3 mb-1">Student profile and personal goals</h2>
+            <p class="text-muted mb-0">Keep your career direction, preferred domains, and learning interests clearly visible to your mentor.</p>
+        </div>
+
+        <div class="glass-card p-4">
+            <div class="row g-4 align-items-center">
+
+                <div class="col-lg-4 text-center">
+                    <div class="profile-photo-wrap mb-3" data-photo-key="menteeProfilePhoto">
+
+                        <asp:Image ID="imgProfile" runat="server"
+                            CssClass="rounded-circle profile-photo profile-photo-empty"
+                            Style="width: 180px; height: 180px; object-fit: cover;"
+                            AlternateText="Mentee" />
+
+                        <button type="button" class="photo-edit-btn" aria-label="Change profile photo" title="Change profile photo">+</button>
+
+                    </div>
+
+                    <h4 class="fw-bold mt-3">
+                        <asp:Label ID="lblnm" runat="server" Text="Student Name"></asp:Label>
+                    </h4>
+
+                    <p class="text-muted">
+                        <asp:Label ID="lblStudentType" runat="server"></asp:Label>
+                        Student
+                    </p>
+                </div>
+
+                <div class="col-lg-8">
+                    <div class="row g-3">
+
+                        <div class="col-md-6">
+                            <div class="dashboard-card p-3">
+                                <h6 class="fw-semibold">Education</h6>
+                                <p class="mb-0 text-muted">
+                                    <asp:Label ID="lblEdu" runat="server" Text="Not provided"></asp:Label>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="dashboard-card p-3">
+                                <h6 class="fw-semibold">Interests</h6>
+                                <p class="mb-0 text-muted">
+                                    <asp:Label ID="lblInt" runat="server" Text="Not provided"></asp:Label>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="dashboard-card p-3">
+                                <h6 class="fw-semibold">Skills</h6>
+                                <p class="mb-0 text-muted">
+                                    <asp:Label ID="lblSkl" runat="server" Text="Not provided"></asp:Label>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="dashboard-card p-3">
+                                <h6 class="fw-semibold">Career Goal</h6>
+                                <p class="mb-0 text-muted">
+                                    <asp:Label ID="lblCrg" runat="server" Text="Not provided"></asp:Label>
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+</asp:Content>
