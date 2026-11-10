@@ -20,7 +20,11 @@
                     <asp:Label ID="Label2" runat="server" class="form-label" Text="Description"></asp:Label><asp:TextBox ID="txtdesc" runat="server" class="form-control" TextMode="MultiLine" Rows="3" placeholder="Briefly describe this category"></asp:TextBox>
                 </div>
                 <div class="col-12">
+<<<<<<< HEAD
                     <asp:LinkButton ID="addCat" runat="server" class="btn gradient-btn" OnClick="addCat_Click"><i class="bi bi-check2-circle me-2"></i>Add Category</asp:LinkButton>
+=======
+                    <asp:LinkButton ID="addCat" runat="server" class="btn gradient-btn"><i class="bi bi-check2-circle me-2"></i>Add Category</asp:LinkButton>
+>>>>>>> c7a986f0fac2b89f646809c0b1c5ae0b6fd1632a
                 </div>
             </div>
         </div>

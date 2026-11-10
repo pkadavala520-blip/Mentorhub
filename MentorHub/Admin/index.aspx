@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/Admin.Master" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="MentorHub.Admin.index" %>
+<<<<<<< HEAD
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
@@ -421,3 +422,8 @@
     </main>
 
 </asp:Content>
+=======
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+
+>>>>>>> c7a986f0fac2b89f646809c0b1c5ae0b6fd1632a

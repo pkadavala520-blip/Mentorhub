@@ -17,10 +17,21 @@
                     <asp:Label ID="Label1" runat="server" class="form-label" Text="Skill Name"></asp:Label><asp:TextBox ID="txtsnm" runat="server" class="form-control" placeholder="e.g. Product Analytics"></asp:TextBox>
                 </div>
                 <div class="col-12">
+<<<<<<< HEAD
                     <asp:Label ID="Label5" runat="server" class="form-label" Text="Category"></asp:Label><asp:DropDownList ID="drpcat" runat="server" class="form-select" AutoPostBack="True"></asp:DropDownList>
                 </div>
                 <div class="col-12">
                     <asp:LinkButton ID="lbtnaddsk" runat="server" class="btn gradient-btn" OnClick="lbtnaddsk_Click"><i class="bi bi-check2-circle me-2"></i>Add Skill</asp:LinkButton>
+=======
+                    <asp:Label ID="Label5" runat="server" class="form-label" Text="Category"></asp:Label><asp:DropDownList ID="drpcat" runat="server" class="form-select" AutoPostBack="True">
+                        <asp:ListItem>Technology</asp:ListItem>
+                        <asp:ListItem>Design</asp:ListItem>
+                        <asp:ListItem>Business</asp:ListItem>
+                    </asp:DropDownList>
+                </div>
+                <div class="col-12">
+                    <asp:LinkButton ID="lbtnaddsk" runat="server" class="btn gradient-btn"><i class="bi bi-check2-circle me-2"></i>Add Skill</asp:LinkButton>
+>>>>>>> c7a986f0fac2b89f646809c0b1c5ae0b6fd1632a
                 </div>
             </div>
         </div>

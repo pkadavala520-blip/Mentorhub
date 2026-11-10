@@ -13,6 +13,7 @@ namespace MentorHub.Admin
 
     public partial class profile
     {
+<<<<<<< HEAD
 
         /// <summary>
         /// imgProfile control.
@@ -76,5 +77,7 @@ namespace MentorHub.Admin
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblJoined;
+=======
+>>>>>>> c7a986f0fac2b89f646809c0b1c5ae0b6fd1632a
     }
 }

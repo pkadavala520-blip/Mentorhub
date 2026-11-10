@@ -286,8 +286,11 @@ document.addEventListener('DOMContentLoaded', function () {
      avatar + a small topbar avatar) stays in sync automatically.
   =========================== */
   (function initProfilePhotoSystem() {
+<<<<<<< HEAD
     // Shared photo controller used by Admin + Mentor dashboards and profiles.
     window.MentorHubProfilePhotoSystem = true;
+=======
+>>>>>>> c7a986f0fac2b89f646809c0b1c5ae0b6fd1632a
     const DEFAULT_PHOTO_KEY = 'mentorProfilePhoto';
     const FRAME_IDS = ['none', 'blue', 'gold', 'green', 'pink'];
     const PLACEHOLDER_SVG = 'data:image/svg+xml;utf8,' + encodeURIComponent(
@@ -300,12 +303,20 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const wraps = document.querySelectorAll('.profile-photo-wrap[data-photo-key]');
     const allProfileImgs = document.querySelectorAll('.profile-photo');
+<<<<<<< HEAD
     if (!allProfileImgs.length || typeof bootstrap === 'undefined') return;
 
     const keyOf = function (el) {
       // Supports both full-page .profile-photo-wrap widgets and standalone
       // dashboard avatars that carry data-photo-key directly.
       return el.dataset.photoKey || ((el.closest('[data-photo-key]') || {}).dataset || {}).photoKey || DEFAULT_PHOTO_KEY;
+=======
+    if (!wraps.length || typeof bootstrap === 'undefined') return;
+
+    const keyOf = function (el) {
+      const wrap = el.closest('[data-photo-key]');
+      return (wrap && wrap.dataset.photoKey) || DEFAULT_PHOTO_KEY;
+>>>>>>> c7a986f0fac2b89f646809c0b1c5ae0b6fd1632a
     };
     const frameKeyOf = function (key) { return key + ':frame'; };
 
@@ -349,6 +360,7 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     };
 
+<<<<<<< HEAD
     // Adopt a real photo already supplied by the Mentor panel's demo store.
     // This prevents the first visit after this upgrade from replacing it with
     // the placeholder.
@@ -359,6 +371,8 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
 
+=======
+>>>>>>> c7a986f0fac2b89f646809c0b1c5ae0b6fd1632a
     // Initial paint for every key present on this page.
     const keysOnPage = new Set();
     allProfileImgs.forEach(function (img) { keysOnPage.add(keyOf(img)); });
@@ -617,6 +631,7 @@ document.addEventListener('DOMContentLoaded', function () {
     wraps.forEach(function (wrap) {
       const key = wrap.dataset.photoKey;
       const btn = wrap.querySelector('.photo-edit-btn');
+<<<<<<< HEAD
       if (btn) {
         btn.addEventListener('click', function () { showAddScreen(key); });
       }
@@ -634,6 +649,20 @@ document.addEventListener('DOMContentLoaded', function () {
         event.stopPropagation();
         if (getPhoto(key)) { showViewScreen(key); } else { showAddScreen(key); }
       });
+=======
+      const img = wrap.querySelector('.profile-photo');
+
+      if (btn) {
+        btn.addEventListener('click', function () { showAddScreen(key); });
+      }
+      if (img) {
+        img.style.cursor = 'pointer';
+        img.title = 'Double-click to view photo';
+        img.addEventListener('dblclick', function () {
+          if (getPhoto(key)) { showViewScreen(key); } else { showAddScreen(key); }
+        });
+      }
+>>>>>>> c7a986f0fac2b89f646809c0b1c5ae0b6fd1632a
     });
 
     console.log('[MentorHub] Profile photo system ready for: ' + Array.from(keysOnPage).join(', '));

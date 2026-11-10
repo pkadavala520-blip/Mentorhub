@@ -2,6 +2,11 @@
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Configuration;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> c7a986f0fac2b89f646809c0b1c5ae0b6fd1632a
 //namespace
 using System.Data.SqlClient;
 using System.Data;
@@ -161,6 +166,10 @@ namespace MentorHub.Home
             {
                 getcon();
                 menteeimgupload();
+<<<<<<< HEAD
+=======
+                   
+>>>>>>> c7a986f0fac2b89f646809c0b1c5ae0b6fd1632a
 
                 cmd = new SqlCommand("insert into Mentee(FullName,Email,Password,Phone,Education,College,CareerGoal,LearningGoal,SkillsInterests,PreferredDomain,Bio,ProfilePhoto,TermsAccepted) " +
                     "values('"+ txtMenteeFullName.Text+ "','"+ txtMenteeEmail.Text+"','"+ txtMenteePassword.Text+ "','"+ txtMenteePhone.Text+ "','"+ ddlEducation.SelectedValue + "','"+ txtCollege .Text + "','"+ ddlCareerGoal.SelectedValue+ "','"+ txtLearningGoal.Text + "','"+ txtSkillsInterests.Text+ "','"+ ddlPreferredDomain.SelectedValue+ "','"+ txtMenteeBio.Text+ "','" + fnm + "','" + (chkMenteeTerms.Checked ? "1":"0")+"')", con);
@@ -286,7 +295,10 @@ namespace MentorHub.Home
             }
         }
 
+<<<<<<< HEAD
         // Login for Admin, Mentor, and Mentee
+=======
+>>>>>>> c7a986f0fac2b89f646809c0b1c5ae0b6fd1632a
         protected void btnAdminLogin_Click(object sender, EventArgs e)
         {
             getcon();

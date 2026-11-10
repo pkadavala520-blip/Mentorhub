@@ -49,6 +49,7 @@ namespace MentorHub.Admin
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder2;
+<<<<<<< HEAD
 
         /// <summary>
         /// Label1 control.
@@ -58,5 +59,7 @@ namespace MentorHub.Admin
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label1;
+=======
+>>>>>>> c7a986f0fac2b89f646809c0b1c5ae0b6fd1632a
     }
 }

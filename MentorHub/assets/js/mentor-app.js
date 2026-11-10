@@ -173,6 +173,7 @@
         el.classList.remove('has-photo');
       }
     });
+<<<<<<< HEAD
     // The newer shared photo UI uses real img elements instead of the old
     // initials avatar spans. Keep those dashboard/profile images in sync with
     // the existing mentor demo data on first load.
@@ -182,6 +183,8 @@
         img.classList.remove('profile-photo-empty');
       });
     }
+=======
+>>>>>>> c7a986f0fac2b89f646809c0b1c5ae0b6fd1632a
   }
 
   function syncBadges() {
@@ -464,12 +467,19 @@
     var map = { name:m.name, title:m.title, bio:m.bio, education:m.education, experience:m.experience, skills:DB.skills.slice(0,3).map(function(s){return s.name;}).join(', '), availability:m.availability, rating:m.rating, reviews:m.reviews };
     Object.keys(map).forEach(function(k){ var e=document.querySelector('[data-profile-' + k + ']'); if(e)e.textContent=map[k]; });
     var wrap = document.querySelector('[data-photo-key]'), img = wrap ? wrap.querySelector('img') : null;
+<<<<<<< HEAD
     if (img && DB.settings.profilePhoto) {
       img.src = DB.settings.profilePhoto;
       img.classList.remove('profile-photo-empty');
     }
     // Photo editing is handled by the shared LinkedIn-style photo system in
     // assets/js/main.js. This page only supplies the existing demo photo data.
+=======
+    if (img && DB.settings.profilePhoto) { img.src = DB.settings.profilePhoto; img.classList.remove('profile-photo-empty'); }
+    if (wrap && img && !wrap.dataset.photoBound) {
+      wrap.dataset.photoBound='1'; var input=document.createElement('input'); input.type='file'; input.accept='image/*'; input.hidden=true; wrap.appendChild(input); var btn=wrap.querySelector('.photo-edit-btn'); if(btn)btn.onclick=function(){input.click();}; input.onchange=function(){var f=input.files[0]; if(!f)return; var r=new FileReader(); r.onload=function(){DB.settings.profilePhoto=r.result;save(DB);img.src=r.result;img.classList.remove('profile-photo-empty');syncAvatars();toast('Profile photo updated','success');};r.readAsDataURL(f);};
+    }
+>>>>>>> c7a986f0fac2b89f646809c0b1c5ae0b6fd1632a
     var edit=document.querySelector('[data-edit-profile-btn]'), modal=document.getElementById('mpEditProfileModal');
     if(edit&&modal&&window.bootstrap&&!edit.dataset.bound){ edit.dataset.bound='1'; var bm=bootstrap.Modal.getOrCreateInstance(modal); edit.onclick=function(){modal.querySelector('[name="name"]').value=m.name;modal.querySelector('[name="title"]').value=m.title;modal.querySelector('[name="bio"]').value=m.bio;bm.show();}; var form=modal.querySelector('form'); form.onsubmit=function(e){e.preventDefault();m.name=form.querySelector('[name="name"]').value.trim()||m.name;m.title=form.querySelector('[name="title"]').value.trim()||m.title;m.bio=form.querySelector('[name="bio"]').value.trim()||m.bio;save(DB);bm.hide();syncAvatars();renderers.profile();toast('Profile updated','success');}; }
   };

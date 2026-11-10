@@ -15,6 +15,7 @@ namespace MentorHub.Admin
     {
 
         /// <summary>
+<<<<<<< HEAD
         /// lblTotalMentors control.
         /// </summary>
         /// <remarks>
@@ -42,6 +43,8 @@ namespace MentorHub.Admin
         protected global::System.Web.UI.WebControls.Label lblInactiveMentors;
 
         /// <summary>
+=======
+>>>>>>> c7a986f0fac2b89f646809c0b1c5ae0b6fd1632a
         /// txtsmentor control.
         /// </summary>
         /// <remarks>

@@ -23,6 +23,10 @@ namespace MentorHub.Mentee
         string fnm, nm;
         protected void Page_Load(object sender, EventArgs e)
         {
+<<<<<<< HEAD
+=======
+
+>>>>>>> c7a986f0fac2b89f646809c0b1c5ae0b6fd1632a
             if (Session["MenteeEmail"] != null)
             {
                 getcon();
@@ -30,8 +34,18 @@ namespace MentorHub.Mentee
                 da = new SqlDataAdapter("SELECT * FROM Mentee WHERE Email = '" + Session["MenteeEmail"] + "'", con);
                 ds = new DataSet();
                 da.Fill(ds);
+<<<<<<< HEAD
                 nm = ds.Tables[0].Rows[0]["FullName"].ToString();
                 Label1.Text = "Welcome, " + nm;
+=======
+
+
+
+                nm = ds.Tables[0].Rows[0]["FullName"].ToString();
+
+
+              //  Label1.Text = "Welcome, " + nm + " 👋";
+>>>>>>> c7a986f0fac2b89f646809c0b1c5ae0b6fd1632a
             }
             else
             {

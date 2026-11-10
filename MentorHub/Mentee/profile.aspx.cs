@@ -1,11 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+<<<<<<< HEAD
 using System.Configuration;
 using System.Data;
 //namespace
 using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
+=======
+>>>>>>> c7a986f0fac2b89f646809c0b1c5ae0b6fd1632a
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -15,6 +18,7 @@ namespace MentorHub.Mentee
 {
     public partial class profile : System.Web.UI.Page
     {
+<<<<<<< HEAD
         SqlConnection con; //connnection
         SqlDataAdapter da;  // container
         DataSet ds;  //select
@@ -68,6 +72,12 @@ namespace MentorHub.Mentee
                 lblInt.Text = ds.Tables[0].Rows[0]["PreferredDomain"].ToString();
                 lblSkl.Text = ds.Tables[0].Rows[0]["SkillsInterests"].ToString();
             }
+=======
+        protected void Page_Load(object sender, EventArgs e)
+        {
+
+
+>>>>>>> c7a986f0fac2b89f646809c0b1c5ae0b6fd1632a
         }
     }
 }

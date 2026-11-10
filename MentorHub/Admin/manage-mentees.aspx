@@ -14,6 +14,14 @@
                 </span>
             </div>
 
+<<<<<<< HEAD
+=======
+            <a href="add-mentee.aspx" class="btn gradient-btn">
+                <i class="bi bi-plus-lg me-2"></i>
+                Add Mentee
+            </a>
+
+>>>>>>> c7a986f0fac2b89f646809c0b1c5ae0b6fd1632a
         </div>
 
 
@@ -29,7 +37,10 @@
 
             <p class="text-muted mb-0">
                 Review and manage all registered mentees on the MentorHub platform.
+<<<<<<< HEAD
            
+=======
+>>>>>>> c7a986f0fac2b89f646809c0b1c5ae0b6fd1632a
             </p>
 
         </div>
@@ -43,11 +54,17 @@
 
                     <p class="text-muted mb-1">
                         Total Mentees
+<<<<<<< HEAD
                    
                     </p>
 
                     <h3 class="fw-bold">
                         <asp:Label ID="lblTotalMentees" runat="server" Text=""></asp:Label>
+=======
+                    </p>
+
+                    <h3 class="fw-bold">0
+>>>>>>> c7a986f0fac2b89f646809c0b1c5ae0b6fd1632a
                     </h3>
 
                 </div>
@@ -61,7 +78,10 @@
 
                     <p class="text-muted mb-1">
                         New This Month
+<<<<<<< HEAD
                    
+=======
+>>>>>>> c7a986f0fac2b89f646809c0b1c5ae0b6fd1632a
                     </p>
 
                     <h3 class="fw-bold">0
@@ -78,7 +98,10 @@
 
                     <p class="text-muted mb-1">
                         Pending Approval
+<<<<<<< HEAD
                    
+=======
+>>>>>>> c7a986f0fac2b89f646809c0b1c5ae0b6fd1632a
                     </p>
 
                     <h3 class="fw-bold">0
@@ -121,7 +144,11 @@
                         ID="btnfilter"
                         runat="server"
                         CssClass="btn btn-outline-secondary btn-sm"
+<<<<<<< HEAD
                         Text="Filter" OnClick="btnfilter_Click"></asp:Button>
+=======
+                        Text="Filter"></asp:Button>
+>>>>>>> c7a986f0fac2b89f646809c0b1c5ae0b6fd1632a
 
                 </div>
 
@@ -137,7 +164,11 @@
                     CssClass="table align-middle mb-0"
                     GridLines="None"
                     DataKeyNames="MenteeID"
+<<<<<<< HEAD
                     EmptyDataText="No mentees found." OnRowCommand="gvMentees_RowCommand">
+=======
+                    EmptyDataText="No mentees found.">
+>>>>>>> c7a986f0fac2b89f646809c0b1c5ae0b6fd1632a
                     <Columns>
 
 
@@ -395,6 +426,7 @@
                         <asp:TemplateField HeaderText="Action">
 
                             <ItemTemplate>
+<<<<<<< HEAD
                                 <asp:LinkButton ID="lnkView"
                                     runat="server"
                                     CssClass="btn btn-sm btn-outline-primary me-1"
@@ -402,12 +434,27 @@
                                     CommandArgument='<%# Eval("MenteeID") %>'>
                                     View
                                 </asp:LinkButton>
+=======
+
+                                <asp:HyperLink
+                                    ID="lnkView"
+                                    runat="server"
+                                    CssClass="btn btn-sm btn-outline-primary me-1"
+                                    NavigateUrl='<%# "mentee-details.aspx?menteeId=" + Eval("MenteeID") %>'
+                                    Text="View">
+                                </asp:HyperLink>
+
+>>>>>>> c7a986f0fac2b89f646809c0b1c5ae0b6fd1632a
 
                                 <asp:LinkButton
                                     ID="btnDelete"
                                     runat="server"
                                     CssClass="btn btn-sm btn-outline-danger"
+<<<<<<< HEAD
                                     CommandName="cmd_del"
+=======
+                                    CommandName="DeleteMentee"
+>>>>>>> c7a986f0fac2b89f646809c0b1c5ae0b6fd1632a
                                     CommandArgument='<%# Eval("MenteeID") %>'
                                     OnClientClick="return confirm('Are you sure you want to delete this mentee?');">
                                     Delete

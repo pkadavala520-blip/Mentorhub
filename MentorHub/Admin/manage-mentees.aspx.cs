@@ -27,7 +27,10 @@ namespace MentorHub.Admin
             if (!IsPostBack)
             {
                 fillMenteeGrid();
+<<<<<<< HEAD
                 fillcountMenteeGrid();
+=======
+>>>>>>> c7a986f0fac2b89f646809c0b1c5ae0b6fd1632a
             }
         }
         void getcon()
@@ -38,6 +41,7 @@ namespace MentorHub.Admin
         void fillMenteeGrid()
         {
             getcon();
+<<<<<<< HEAD
             da = new SqlDataAdapter(" SELECT * FROM Mentee", con);
             ds = new DataSet();
             da.Fill(ds);
@@ -79,6 +83,23 @@ namespace MentorHub.Admin
             da.Fill(ds);
             gvMentees.DataSource = ds;
             gvMentees.DataBind();
+=======
+
+
+            da = new SqlDataAdapter(" SELECT * FROM Mentee", con);
+
+            ds = new DataSet();
+            da.Fill(ds);
+
+            gvMentees.DataSource = ds;
+            gvMentees.DataBind();
+
+            con.Close();
+        }
+        protected void gvMentees_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+>>>>>>> c7a986f0fac2b89f646809c0b1c5ae0b6fd1632a
         }
     }
 }

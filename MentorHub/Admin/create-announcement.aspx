@@ -27,7 +27,11 @@
                     </asp:DropDownList>
                 </div>
                 <div class="col-12">
+<<<<<<< HEAD
                     <asp:LinkButton ID="lbtnaddpn" runat="server" class="btn gradient-btn" OnClick="lbtnaddpn_Click"><i class="bi bi-send me-2"></i>Publish Notice</asp:LinkButton>
+=======
+                    <asp:LinkButton ID="lbtnaddpn" runat="server" class="btn gradient-btn"><i class="bi bi-send me-2"></i>Publish Notice</asp:LinkButton>
+>>>>>>> c7a986f0fac2b89f646809c0b1c5ae0b6fd1632a
                 </div>
             </div>
         </div>

@@ -43,7 +43,12 @@
                 <main class="flex-grow-1 content-area p-4">
                     <div class="topbar rounded-4 p-3 mb-4 d-flex justify-content-between align-items-center">
                         <div>
+<<<<<<< HEAD
                             <asp:Label ID="Label1" runat="server" class="fw-semibold" Text=""></asp:Label>
+=======
+                            <button class="btn btn-outline-secondary me-3 sidebar-toggle-btn" data-sidebar-toggle aria-label="Toggle navigation menu" aria-expanded="false"><i class="bi bi-list"></i></button>
+                            <span class="fw-semibold">Welcome back, Admin</span>
+>>>>>>> c7a986f0fac2b89f646809c0b1c5ae0b6fd1632a
                         </div>
                         <div class="d-flex align-items-center gap-3">
                             <i class="bi bi-bell fs-5"></i>
@@ -300,11 +305,48 @@
         </div>
         </asp:ContentPlaceHolder>
         </div>
+<<<<<<< HEAD
    
+=======
+>>>>>>> c7a986f0fac2b89f646809c0b1c5ae0b6fd1632a
     </form>
     <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/vendor/chartjs/chart.umd.js"></script>
     <script src="../assets/js/main.js?v=6"></script>
+<<<<<<< HEAD
+=======
+    <script>
+        const analytics = document.getElementById('analyticsChart');
+        if (analytics) {
+            new Chart(analytics, {
+                type: 'bar',
+                data: {
+                    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+                    datasets: [{
+                        label: 'Matches',
+                        data: [120, 130, 145, 160, 180, 210],
+                        backgroundColor: ['#4f46e5', '#7c3aed', '#4f46e5', '#7c3aed', '#4f46e5', '#7c3aed']
+                    }]
+                },
+                options: { responsive: true, plugins: { legend: { display: false } } }
+            });
+        }
+        const category = document.getElementById('categoryChart');
+        if (category) {
+            new Chart(category, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Tech', 'Business', 'Design', 'Education'],
+                    datasets: [{
+                        data: [35, 25, 20, 20],
+                        backgroundColor: ['#4f46e5', '#7c3aed', '#22c55e', '#f59e0b']
+                    }]
+                },
+                options: { responsive: true, plugins: { legend: { position: 'bottom' } } }
+            });
+        }
+    </script>
+>>>>>>> c7a986f0fac2b89f646809c0b1c5ae0b6fd1632a
 
 </body>
 </html>

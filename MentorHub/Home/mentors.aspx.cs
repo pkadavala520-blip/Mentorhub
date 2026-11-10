@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+<<<<<<< HEAD
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
@@ -7,6 +8,9 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
+=======
+using System.Linq;
+>>>>>>> c7a986f0fac2b89f646809c0b1c5ae0b6fd1632a
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -15,6 +19,7 @@ namespace MentorHub.Home
 {
     public partial class mentors : System.Web.UI.Page
     {
+<<<<<<< HEAD
         SqlConnection con; //connnection
         SqlDataAdapter da;  // container
         DataSet ds;  //select
@@ -97,3 +102,11 @@ namespace MentorHub.Home
         }
     }
 }
+=======
+        protected void Page_Load(object sender, EventArgs e)
+        {
+
+        }
+    }
+}
+>>>>>>> c7a986f0fac2b89f646809c0b1c5ae0b6fd1632a

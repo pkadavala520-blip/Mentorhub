@@ -1,15 +1,19 @@
 using System;
+<<<<<<< HEAD
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+=======
+>>>>>>> c7a986f0fac2b89f646809c0b1c5ae0b6fd1632a
 
 namespace MentorHub.Mentor
 {
     public partial class Mentor_Profile : System.Web.UI.Page
     {
+<<<<<<< HEAD
         SqlConnection con; //connnection
         SqlDataAdapter da;  // container
         DataSet ds;  //select
@@ -85,5 +89,15 @@ namespace MentorHub.Mentor
             lblMessage.Text = "Profile Updated Successfully!";
         }
 
+=======
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            if (!IsPostBack)
+            {
+                // Existing MentorHub UI/data behavior is preserved by mentor-app.js.
+                // Add database binding here when connecting this page to SQL Server.
+            }
+        }
+>>>>>>> c7a986f0fac2b89f646809c0b1c5ae0b6fd1632a
     }
 }

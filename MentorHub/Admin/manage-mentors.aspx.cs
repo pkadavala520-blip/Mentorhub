@@ -30,7 +30,10 @@ namespace MentorHub.Admin
             if (!IsPostBack)
             {
                 fillMentorGrid();
+<<<<<<< HEAD
                 fillcountMentorGrid();
+=======
+>>>>>>> c7a986f0fac2b89f646809c0b1c5ae0b6fd1632a
             }
         }
 
@@ -43,6 +46,7 @@ namespace MentorHub.Admin
         void fillMentorGrid()
         {
             getcon();
+<<<<<<< HEAD
             da = new SqlDataAdapter(" SELECT * FROM Mentor ", con);
             ds = new DataSet();
             da.Fill(ds);
@@ -56,6 +60,19 @@ namespace MentorHub.Admin
             int total = Convert.ToInt32(cmd.ExecuteScalar());
 
             lblTotalMentors.Text = total.ToString();
+=======
+
+            
+            da = new SqlDataAdapter(" SELECT * FROM Mentor ", con);
+
+            ds = new DataSet();
+            da.Fill(ds);
+
+            gvMentors.DataSource = ds;
+            gvMentors.DataBind();
+
+            con.Close();
+>>>>>>> c7a986f0fac2b89f646809c0b1c5ae0b6fd1632a
         }
         protected void gvMentors_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -64,6 +81,7 @@ namespace MentorHub.Admin
 
         protected void gvMentors_RowCommand(object sender, GridViewCommandEventArgs e)
         {
+<<<<<<< HEAD
             if (e.CommandName == "cmd_edt")
             {
                 int id = Convert.ToInt16(e.CommandArgument);
@@ -90,5 +108,11 @@ namespace MentorHub.Admin
             gvMentors.DataSource = ds;
             gvMentors.DataBind();
         }
+=======
+           
+        }
+
+      
+>>>>>>> c7a986f0fac2b89f646809c0b1c5ae0b6fd1632a
     }
 }

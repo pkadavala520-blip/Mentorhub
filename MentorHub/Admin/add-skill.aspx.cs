@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+<<<<<<< HEAD
 using System.Configuration;
 using System.Data;
 //namespace
@@ -8,6 +9,9 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Reflection.Emit;
+=======
+using System.Linq;
+>>>>>>> c7a986f0fac2b89f646809c0b1c5ae0b6fd1632a
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -16,6 +20,7 @@ namespace MentorHub.Admin
 {
     public partial class add_skill : System.Web.UI.Page
     {
+<<<<<<< HEAD
         SqlConnection con; //connnection
         SqlDataAdapter da;  // container
         DataSet ds;  //select
@@ -76,6 +81,11 @@ namespace MentorHub.Admin
             cmd = new SqlCommand("Insert into Skill (Skill_Nm,Category) values ('" + txtsnm.Text + "','" + drpcat.SelectedItem.Text + "') ", con);
             cmd.ExecuteNonQuery();
             Response.Redirect("skills.aspx");
+=======
+        protected void Page_Load(object sender, EventArgs e)
+        {
+
+>>>>>>> c7a986f0fac2b89f646809c0b1c5ae0b6fd1632a
         }
     }
 }

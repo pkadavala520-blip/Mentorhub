@@ -15,6 +15,7 @@ namespace MentorHub.Admin
     {
 
         /// <summary>
+<<<<<<< HEAD
         /// MentorPhoto control.
         /// </summary>
         /// <remarks>
@@ -87,6 +88,8 @@ namespace MentorHub.Admin
         protected global::System.Web.UI.WebControls.Label lblExp;
 
         /// <summary>
+=======
+>>>>>>> c7a986f0fac2b89f646809c0b1c5ae0b6fd1632a
         /// Label1 control.
         /// </summary>
         /// <remarks>
@@ -159,6 +162,7 @@ namespace MentorHub.Admin
         protected global::System.Web.UI.WebControls.DropDownList drpmstu;
 
         /// <summary>
+<<<<<<< HEAD
         /// lblmsg control.
         /// </summary>
         /// <remarks>
@@ -168,6 +172,8 @@ namespace MentorHub.Admin
         protected global::System.Web.UI.WebControls.Label lblmsg;
 
         /// <summary>
+=======
+>>>>>>> c7a986f0fac2b89f646809c0b1c5ae0b6fd1632a
         /// btnscng control.
         /// </summary>
         /// <remarks>

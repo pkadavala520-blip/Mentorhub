@@ -33,6 +33,18 @@ namespace MentorHub.Mentee
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
+<<<<<<< HEAD
+=======
+        /// ContentPlaceHolder1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder1;
+
+        /// <summary>
+>>>>>>> c7a986f0fac2b89f646809c0b1c5ae0b6fd1632a
         /// ContentPlaceHolder2 control.
         /// </summary>
         /// <remarks>
@@ -40,6 +52,7 @@ namespace MentorHub.Mentee
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder2;
+<<<<<<< HEAD
 
         /// <summary>
         /// Label1 control.
@@ -49,5 +62,7 @@ namespace MentorHub.Mentee
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label1;
+=======
+>>>>>>> c7a986f0fac2b89f646809c0b1c5ae0b6fd1632a
     }
 }

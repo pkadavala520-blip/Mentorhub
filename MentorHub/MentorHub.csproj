@@ -44,7 +44,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+<<<<<<< HEAD
     <Reference Include="System.Web.DataVisualization" />
+=======
+>>>>>>> c7a986f0fac2b89f646809c0b1c5ae0b6fd1632a
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -69,6 +72,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Admin\add-category.aspx" />
+<<<<<<< HEAD
+=======
+    <Content Include="Admin\add-mentee.aspx" />
+    <Content Include="Admin\add-mentor.aspx" />
+>>>>>>> c7a986f0fac2b89f646809c0b1c5ae0b6fd1632a
     <Content Include="Admin\add-skill.aspx" />
     <Content Include="Admin\announcements.aspx" />
     <Content Include="Admin\categories.aspx" />
@@ -86,9 +94,15 @@
     <Content Include="Admin\sessions.aspx" />
     <Content Include="Admin\settings.aspx" />
     <Content Include="Admin\skills.aspx" />
+<<<<<<< HEAD
     <Content Include="App_Data\MentorhubDB.mdf" />
     <Content Include="App_Data\MentorhubDB_log.ldf">
       <DependentUpon>MentorhubDB.mdf</DependentUpon>
+=======
+    <Content Include="App_Data\Mentorehubdb.mdf" />
+    <Content Include="App_Data\Mentorehubdb_log.ldf">
+      <DependentUpon>Mentorehubdb.mdf</DependentUpon>
+>>>>>>> c7a986f0fac2b89f646809c0b1c5ae0b6fd1632a
     </Content>
     <Content Include="assets\css\mentor-panel.css" />
     <Content Include="assets\css\styles.css" />
@@ -123,6 +137,10 @@
     <Content Include="Mentee\requests.aspx" />
     <Content Include="Mentee\schedule.aspx" />
     <Content Include="Mentee\settings.aspx" />
+<<<<<<< HEAD
+=======
+    <Content Include="Mentor\Mentor.Master" />
+>>>>>>> c7a986f0fac2b89f646809c0b1c5ae0b6fd1632a
     <Content Include="Mentor\add-slot.aspx" />
     <Content Include="Mentor\availability.aspx" />
     <Content Include="Mentor\edit-skills.aspx" />
@@ -147,6 +165,23 @@
     <Compile Include="Admin\add-category.aspx.designer.cs">
       <DependentUpon>add-category.aspx</DependentUpon>
     </Compile>
+<<<<<<< HEAD
+=======
+    <Compile Include="Admin\add-mentee.aspx.cs">
+      <DependentUpon>add-mentee.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\add-mentee.aspx.designer.cs">
+      <DependentUpon>add-mentee.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\add-mentor.aspx.cs">
+      <DependentUpon>add-mentor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\add-mentor.aspx.designer.cs">
+      <DependentUpon>add-mentor.aspx</DependentUpon>
+    </Compile>
+>>>>>>> c7a986f0fac2b89f646809c0b1c5ae0b6fd1632a
     <Compile Include="Admin\add-skill.aspx.cs">
       <DependentUpon>add-skill.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -575,7 +610,10 @@
     <Content Include="assets\vendor\bootstrap-icons\font\fonts\bootstrap-icons.woff2" />
     <Content Include="Mentee\Mentee.Master" />
     <Content Include="Home\Home.Master" />
+<<<<<<< HEAD
     <Content Include="Mentor\Mentor.Master" />
+=======
+>>>>>>> c7a986f0fac2b89f646809c0b1c5ae0b6fd1632a
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

@@ -3238,6 +3238,7 @@ body.mentor-dark .mp-modal h4, body.mentor-dark .mp-modal h5, body.mentor-dark .
 body.mentor-dark .mp-card .fw-semibold, body.mentor-dark .mp-card .fw-bold { color: var(--mp-ink); }
 body.mentor-dark .mp-search { background: var(--mp-surface) !important; border-color: var(--mp-border) !important; box-shadow: none !important; }
 body.mentor-dark .pm-aurora i { mix-blend-mode: screen; }
+<<<<<<< HEAD
 
 /* Shared LinkedIn-style profile photo system: small dashboard avatars */
 img.mp-avatar.profile-photo {
@@ -3247,3 +3248,5 @@ img.mp-avatar.profile-photo {
     cursor: pointer;
 }
 
+=======
+>>>>>>> c7a986f0fac2b89f646809c0b1c5ae0b6fd1632a

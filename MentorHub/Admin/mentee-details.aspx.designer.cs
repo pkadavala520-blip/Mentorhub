@@ -15,6 +15,7 @@ namespace MentorHub.Admin
     {
 
         /// <summary>
+<<<<<<< HEAD
         /// MenteePhoto control.
         /// </summary>
         /// <remarks>
@@ -123,6 +124,8 @@ namespace MentorHub.Admin
         protected global::System.Web.UI.WebControls.Label lbljoind;
 
         /// <summary>
+=======
+>>>>>>> c7a986f0fac2b89f646809c0b1c5ae0b6fd1632a
         /// Label1 control.
         /// </summary>
         /// <remarks>

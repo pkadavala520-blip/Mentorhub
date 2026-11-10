@@ -15,6 +15,7 @@ namespace MentorHub.Admin
     {
 
         /// <summary>
+<<<<<<< HEAD
         /// lblTotalMentees control.
         /// </summary>
         /// <remarks>
@@ -24,6 +25,8 @@ namespace MentorHub.Admin
         protected global::System.Web.UI.WebControls.Label lblTotalMentees;
 
         /// <summary>
+=======
+>>>>>>> c7a986f0fac2b89f646809c0b1c5ae0b6fd1632a
         /// txtsearch control.
         /// </summary>
         /// <remarks>

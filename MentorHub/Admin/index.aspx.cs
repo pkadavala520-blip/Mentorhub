@@ -10,7 +10,10 @@ using System.Reflection.Emit;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+<<<<<<< HEAD
 using System.Web.Script.Serialization;
+=======
+>>>>>>> c7a986f0fac2b89f646809c0b1c5ae0b6fd1632a
 
 namespace MentorHub.Admin
 {
@@ -29,6 +32,7 @@ namespace MentorHub.Admin
             {
                 getcon();
 
+<<<<<<< HEAD
                 da = new SqlDataAdapter("Select * From Admins where Email = '" + Session["AdminsEmail"] + "'", con);
                 ds = new DataSet();
                 da.Fill(ds);
@@ -51,6 +55,23 @@ namespace MentorHub.Admin
                 fillcountMenteeGrid();
                 fillcountMentorGrid();
             }
+=======
+                da = new SqlDataAdapter("SELECT * FROM Admins WHERE Email = '" + Session["AdminsEmail"] + "'", con);
+                ds = new DataSet();
+                da.Fill(ds);
+
+
+
+                nm = ds.Tables[0].Rows[0]["FullName"].ToString();
+
+               
+            }
+            else
+            {
+
+                Response.Redirect("~/Home/SignIn_up.aspx");
+            }
+>>>>>>> c7a986f0fac2b89f646809c0b1c5ae0b6fd1632a
         }
 
         void getcon()
@@ -58,6 +79,7 @@ namespace MentorHub.Admin
             con = new SqlConnection(s);
             con.Open();
         }
+<<<<<<< HEAD
 
         void fillcountMentorGrid()
         {
@@ -157,5 +179,7 @@ namespace MentorHub.Admin
             ClientScript.RegisterStartupScript(
                 this.GetType(), "CategoryChart", script, true);
         }
+=======
+>>>>>>> c7a986f0fac2b89f646809c0b1c5ae0b6fd1632a
     }
 }

@@ -1,11 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+<<<<<<< HEAD
 using System.Configuration;
 using System.Data;
 //namespace
 using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
+=======
+>>>>>>> c7a986f0fac2b89f646809c0b1c5ae0b6fd1632a
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -15,6 +18,7 @@ namespace MentorHub.Admin
 {
     public partial class mentee_details : System.Web.UI.Page
     {
+<<<<<<< HEAD
         SqlConnection con; //connnection
         SqlDataAdapter da;  // container
         DataSet ds;  //select
@@ -111,6 +115,11 @@ namespace MentorHub.Admin
             cmd = new SqlCommand("Update Mentee set FullName='" + txtfnm.Text + "', Education='" + txtedu.Text + "',SkillsInterests='" + txtint.Text + "',Status='" + drpstu.SelectedValue + "' where MenteeID = '" + Request.QueryString["id"] + "'", con);
             cmd.ExecuteNonQuery();
             FillEditMentee();
+=======
+        protected void Page_Load(object sender, EventArgs e)
+        {
+
+>>>>>>> c7a986f0fac2b89f646809c0b1c5ae0b6fd1632a
         }
     }
 }

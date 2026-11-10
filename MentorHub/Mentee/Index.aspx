@@ -1,10 +1,15 @@
+<<<<<<< HEAD
 ﻿<%@ Page Title="Dashboard"
     Language="C#"
     MasterPageFile="~/Mentee/Mentee.Master"
+=======
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Mentee/Mentee.Master"
+>>>>>>> c7a986f0fac2b89f646809c0b1c5ae0b6fd1632a
     AutoEventWireup="true"
     CodeBehind="Index.aspx.cs"
     Inherits="MentorHub.Mentee.Index" %>
 
+<<<<<<< HEAD
 
 <asp:Content
     ID="Content1"
@@ -309,3 +314,8 @@
 
 
 
+=======
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+
+>>>>>>> c7a986f0fac2b89f646809c0b1c5ae0b6fd1632a
